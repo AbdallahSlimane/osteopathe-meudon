@@ -440,15 +440,19 @@
       .burger { display: none; }
       .nav-links { display: flex !important; position: static; flex-direction: row; background: transparent; padding: 0; }
       #hero {
-        max-width: 1180px;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto auto;
+        justify-items: center;
+        row-gap: 1.5rem;
+        max-width: 640px;
         margin: 0 auto;
-        column-gap: 3rem;
-        padding-top: 3rem;
-        padding-left: 1rem;
-        padding-right: 1rem;
+        padding: 3.5rem 1rem 3rem;
       }
-      .hero-photo { justify-self: center; }
-      .hero-info { padding: 2rem 3% 2rem 3%; }
+      .hero-photo { grid-column: 1; grid-row: 1; justify-self: center; max-height: 340px; }
+      .hero-info { grid-column: 1; grid-row: 2; padding: 0; }
+      .hero-bullets { grid-column: 1; grid-row: 3; padding: 0; }
+      .hero-bullets ul { flex-direction: row; flex-wrap: wrap; justify-content: center; row-gap: .6rem; column-gap: 1.6rem; }
+      .hero-ctas { grid-column: 1; grid-row: 4; padding: 0; }
     }
 
     /* ── Tablette + mobile : burger ── */
