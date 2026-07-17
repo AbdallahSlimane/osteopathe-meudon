@@ -439,7 +439,16 @@
     @media (min-width: 1025px) {
       .burger { display: none; }
       .nav-links { display: flex !important; position: static; flex-direction: row; background: transparent; padding: 0; }
-      #hero { padding-top: 2.5rem; padding-left: 2.5rem; padding-right: 1rem; }
+      #hero {
+        max-width: 1180px;
+        margin: 0 auto;
+        column-gap: 3rem;
+        padding-top: 3rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+      }
+      .hero-photo { justify-self: center; }
+      .hero-info { padding: 2rem 3% 2rem 3%; }
     }
 
     /* ── Tablette + mobile : burger ── */
