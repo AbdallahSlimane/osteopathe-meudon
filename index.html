@@ -439,10 +439,21 @@
     @media (min-width: 1025px) {
       .burger { display: none; }
       .nav-links { display: flex !important; position: static; flex-direction: row; background: transparent; padding: 0; }
-      #hero { padding-top: 2.5rem; padding-left: 2.5rem; padding-right: 1rem; }
-      .hero-photo { justify-self: center; }
-      .hero-bullets { display: flex; justify-content: center; }
+      #hero {
+        max-width: 1000px;
+        margin: 0 auto;
+        column-gap: 2rem;
+        padding-top: 2.5rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+      }
+      .hero-photo { justify-self: center; max-height: 400px; }
+      .hero-info { padding: 1.5rem 4% 1.5rem 4%; }
+      .hero-info h1 { font-size: 2.5rem; }
+      .hero-info .hero-subtitle { font-size: 1.05rem; }
+      .hero-bullets { display: flex; justify-content: center; padding: 1.5rem 4% 2rem; }
       .hero-bullets ul { align-items: center; }
+      .hero-ctas { padding: 1.5rem 4% 2rem; }
     }
 
     /* ── Tablette + mobile : burger ── */
