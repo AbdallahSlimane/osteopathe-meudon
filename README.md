@@ -1,18 +1,20 @@
 # Site — Aurélie Diméglio, Ostéopathe D.O. à Meudon
 
 Site vitrine statique (HTML/CSS pur, aucune dépendance, aucun build).
-Toutes les images sont embarquées en base64, les polices viennent de Google Fonts.
+Les images sont des fichiers WebP dans `images/`, les polices viennent de Google Fonts.
 
 ## Pages
 
 - `index.html` — accueil
 - `apropos.html` — à propos
+- `cycle.html` — règles douloureuses & troubles du cycle
 - `femme-enceinte.html`
 - `nourrisson.html`
-- `sportifs.html`
-- `machoire.html`
 - `endometriose.html`
+- `machoire.html`
 - `politique-cookies.html`
+
+Les images sont dans `images/` (WebP) et doivent être déployées avec les pages.
 
 ## Déploiement sur Render (site statique)
 
@@ -41,5 +43,5 @@ registrar vers la cible fournie par Render.
 
 ## Aperçu en local
 
-Aucun serveur requis, ouvrir `index.html` dans un navigateur.
-Ou avec Python : `python3 -m http.server` puis http://localhost:8000
+Les images étant référencées en chemins relatifs, servir le dossier :
+`python3 -m http.server` puis http://localhost:8000
