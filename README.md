@@ -43,5 +43,6 @@ registrar vers la cible fournie par Render.
 
 ## Aperçu en local
 
-Les images étant référencées en chemins relatifs, servir le dossier :
-`python3 -m http.server` puis http://localhost:8000
+Ouvrir `index.html` dans un navigateur (les images sont en chemins relatifs,
+elles s'affichent tant que `images/` est à côté).
+Ou avec Python : `python3 -m http.server` puis http://localhost:8000
