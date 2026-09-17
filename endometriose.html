@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet"/>
   <style>
-    /* Sécurité responsive : aucune image ne dépasse son conteneur */
+    /* Securite responsive images */
     img { max-width: 100%; }
     img:not([style*="height"]):not([class]) { height: auto; }
 
@@ -59,16 +59,16 @@
     .has-drop.open > .drop-toggle::after { transform: rotate(180deg); }
     .dropdown {
       display: none; position: absolute; top: calc(100% + 8px); left: 0;
-      background: var(--nav-bg); border: 1px solid rgba(255,255,255,.18);
-      border-radius: 10px; min-width: 248px; overflow: hidden;
+      background: var(--nav-bg); border: 1px solid rgba(122,171,142,.2);
+      border-radius: 10px; min-width: 190px; overflow: hidden;
       box-shadow: 0 8px 28px rgba(0,0,0,.25); z-index: 1000;
     }
     .has-drop.open .dropdown { display: block; }
     .dropdown a {
-      display: block; white-space: nowrap; padding: .65rem 1.1rem; font-size: .82rem;
-      color: rgba(255,255,255,.88); transition: background .15s, color .15s;
+      display: block; padding: .65rem 1.1rem; font-size: .82rem;
+      color: rgba(214,236,224,.8); transition: background .15s, color .15s;
     }
-    .dropdown a:hover, .dropdown a:active { background: rgba(255,255,255,.12); color: #fff; }
+    .dropdown a:hover, .dropdown a:active { background: rgba(122,171,142,.15); color: var(--sage); }
     .burger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; }
     .burger span { display: block; width: 24px; height: 2px; background: #fff; border-radius: 2px; }
 
@@ -348,7 +348,7 @@
   <div class="bar rv" style="margin-left:auto;margin-right:auto;margin-bottom:2.5rem;"></div>
   <div class="two-col">
     <div class="col-photo rv" style="aspect-ratio:3/4;">
-      <img src="images/aurelie-dimeglio-en-consultation-avec-un.webp" alt="Aurélie Diméglio en consultation avec un patient" style="width:100%;height:100%;object-fit:cover;object-position:center 25%;" width="804" height="1200" />
+      <img src="images/aurelie-dimeglio-en-consultation-avec-un.webp" alt="Aurélie Diméglio en consultation avec un patient" style="width:100%;height:100%;object-fit:cover;object-position:center 25%;" width="1000" height="1493" decoding="async" />
     </div>
     <div class="rv" style="display:flex;flex-direction:column;justify-content:center;">
       <span class="resendo"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#8B6F47" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 22c1.25-1.25 2.5-2.5 3.5-4 4.5-7 8-9 13.5-10.5C17.5 13 15 17 10 19c-1.5.5-3 2-5 3H2z"/><path d="M6 18 12 12"/></svg> Membre Endo Île-de-France — réseau ville-hôpital endométriose en Île-de-France</span>
@@ -370,7 +370,7 @@
   <div class="bar rv" style="margin-left:auto;margin-right:auto;margin-bottom:2rem;"></div>
 
   <div class="quand-item rv">
-    <h3><img src="images/endometriose.webp" alt="Douleurs pelviennes" style="width:26px;height:auto;display:inline-block;vertical-align:middle;margin-right:.4rem;" width="96" height="70" /> Douleurs pelviennes et dysménorrhées<svg class="quand-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></h3>
+    <h3><img src="images/endometriose.webp" alt="Douleurs pelviennes" style="width:26px;height:auto;display:inline-block;vertical-align:middle;margin-right:.4rem;" width="96" height="70" decoding="async" /> Douleurs pelviennes et dysménorrhées<svg class="quand-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></h3>
     <div class="quand-body">
       <p>Les <strong>douleurs menstruelles intenses</strong> et les douleurs pelviennes chroniques peuvent être liées à des tensions des tissus environnants : ligaments utérosacraux, fascias pelviens, muscles du plancher pelvien.</p>
     <p style="color:var(--sage-dark);font-style:italic;">L'ostéopathie travaille sur la mobilité des structures pelviennes pour aider à réduire les tensions et améliorer le confort au quotidien.</p>
@@ -410,7 +410,7 @@
   </div>
 
   <div class="quand-item rv">
-    <h3><img src="images/femme-enceinte.webp" alt="Projet de grossesse" style="width:24px;height:auto;display:inline-block;vertical-align:middle;margin-right:.4rem;" width="60" height="96" loading="lazy" decoding="async" /> Endométriose et projet de grossesse<svg class="quand-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></h3>
+    <h3><img src="images/femme-enceinte.webp" alt="Projet de grossesse" style="width:24px;height:auto;display:inline-block;vertical-align:middle;margin-right:.4rem;" width="96" height="153" loading="lazy" decoding="async" /> Endométriose et projet de grossesse<svg class="quand-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></h3>
     <div class="quand-body">
       <p>Dans le cadre d'un <strong>projet de grossesse</strong> ou d'une assistance médicale à la procréation (AMP/FIV), l'ostéopathie peut accompagner la préparation du corps en optimisant la mobilité pelvienne et en réduisant les tensions.</p>
     <p style="color:var(--sage-dark);font-style:italic;">Je travaille en lien avec votre équipe médicale pour un accompagnement complémentaire et adapté à votre parcours.</p>
@@ -482,7 +482,7 @@
   const navLinks = document.getElementById('navLinks');
   burger.addEventListener('click', () => navLinks.classList.toggle('open'));
 
-  // ── Dropdown Spécialités : clic (mobile) et clic (ordi) ──
+  // ── Dropdown Spécialités (repris de index.html) ──
   const hasDrop = document.querySelector('.has-drop');
   const dropToggle = hasDrop.querySelector('.drop-toggle');
   dropToggle.addEventListener('click', function (e) { e.preventDefault(); hasDrop.classList.toggle('open'); });

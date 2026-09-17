@@ -10,9 +10,13 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet"/>
   <style>
-    /* Sécurité responsive : aucune image ne dépasse son conteneur */
+    /* Securite responsive images */
     img { max-width: 100%; }
     img:not([style*="height"]):not([class]) { height: auto; }
+
+    /* Sécurité responsive : aucune image ne dépasse son conteneur */
+    img { max-width: 100%; }
+    img:not([style*="height"]) { height: auto; }
 
     :root {
       --sage:         #8BA185;
@@ -58,16 +62,16 @@
     .has-drop.open > .drop-toggle::after { transform: rotate(180deg); }
     .dropdown {
       display: none; position: absolute; top: calc(100% + 8px); left: 0;
-      background: var(--nav-bg); border: 1px solid rgba(255,255,255,.18);
-      border-radius: 10px; min-width: 248px; overflow: hidden;
+      background: var(--nav-bg); border: 1px solid rgba(122,171,142,.2);
+      border-radius: 10px; min-width: 190px; overflow: hidden;
       box-shadow: 0 8px 28px rgba(0,0,0,.25); z-index: 1000;
     }
     .has-drop.open .dropdown { display: block; }
     .dropdown a {
-      display: block; white-space: nowrap; padding: .65rem 1.1rem; font-size: .82rem;
-      color: rgba(255,255,255,.88); transition: background .15s, color .15s;
+      display: block; padding: .65rem 1.1rem; font-size: .82rem;
+      color: rgba(214,236,224,.8); transition: background .15s, color .15s;
     }
-    .dropdown a:hover, .dropdown a:active { background: rgba(255,255,255,.12); color: #fff; }
+    .dropdown a:hover, .dropdown a:active { background: rgba(122,171,142,.15); color: var(--sage); }
     .burger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; }
     .burger span { display: block; width: 24px; height: 2px; background: #fff; border-radius: 2px; }
 
@@ -271,7 +275,7 @@
       <p>Je reçois également hommes, enfants, nourrissons et personnes âgées pour l'ensemble des motifs ostéopathiques courants.</p>
     </div>
     <div class="col-photo">
-      <img src="images/aurelie-dimeglio-osteopathe-a-meudon.webp" alt="Aurélie Diméglio – Ostéopathe à Meudon" style="width:100%;height:100%;object-fit:cover;" width="800" height="1066" />
+      <img src="images/aurelie-dimeglio-osteopathe-a-meudon.webp" alt="Aurélie Diméglio – Ostéopathe à Meudon" style="width:100%;height:100%;object-fit:cover;" width="800" height="1066" decoding="async" />
     </div>
   </div>
 </section>
@@ -359,7 +363,7 @@
   </div>
   <div class="rv" style="display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;max-width:1100px;margin:0 auto;">
     <div style="border-radius:var(--r);overflow:hidden;aspect-ratio:3/4;">
-      <img src="images/seance-d-osteopathie-au-cabinet-de-meudo.webp" alt="Séance d'ostéopathie au cabinet de Meudon" style="width:100%;height:100%;object-fit:cover;" width="800" height="1195" />
+      <img src="images/seance-d-osteopathie-au-cabinet-de-meudo.webp" alt="Séance d'ostéopathie au cabinet de Meudon" style="width:100%;height:100%;object-fit:cover;" width="800" height="1195" decoding="async" />
     </div>
     <div style="border-radius:var(--r);overflow:hidden;aspect-ratio:3/4;">
       <img src="images/manipulation-de-l-epaule-en-osteopathie.webp" alt="Manipulation de l'épaule en ostéopathie" style="width:100%;height:100%;object-fit:cover;" width="800" height="1195" loading="lazy" decoding="async" />
@@ -441,7 +445,7 @@
     <h2 style="margin-bottom:.5rem;">Mes spécialités</h2>
     <div class="bar" style="margin:0.9rem auto 1.8rem;"></div>
     <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:1rem;">
-      <a href="femme-enceinte.html" style="text-decoration:none;"><div style="background:var(--off);border-radius:50px;padding:.6rem 1.4rem;font-size:.88rem;color:var(--ink2);border:1px solid var(--sage-light);"><img src="images/femme-enceinte.webp" alt="Femme enceinte" style="width:16px;height:auto;display:inline-block;vertical-align:middle;margin-right:.3rem;" width="60" height="96" loading="lazy" decoding="async" />Femme enceinte</div></a>
+      <a href="femme-enceinte.html" style="text-decoration:none;"><div style="background:var(--off);border-radius:50px;padding:.6rem 1.4rem;font-size:.88rem;color:var(--ink2);border:1px solid var(--sage-light);"><img src="images/femme-enceinte.webp" alt="Femme enceinte" style="width:16px;height:auto;display:inline-block;vertical-align:middle;margin-right:.3rem;" width="96" height="153" loading="lazy" decoding="async" />Femme enceinte</div></a>
       <a href="nourrisson.html" style="text-decoration:none;"><div style="background:var(--off);border-radius:50px;padding:.6rem 1.4rem;font-size:.88rem;color:var(--ink2);border:1px solid var(--sage-light);"><img src="images/nourrisson.webp" alt="Nourrisson" style="width:18px;height:auto;display:inline-block;vertical-align:middle;margin-right:.3rem;" width="96" height="70" loading="lazy" decoding="async" />Nourrisson</div></a>
       <a href="endometriose.html" style="text-decoration:none;"><div style="background:var(--off);border-radius:50px;padding:.6rem 1.4rem;font-size:.88rem;color:var(--ink2);border:1px solid var(--sage-light);"><img src="images/endometriose.webp" alt="Endométriose" style="width:18px;height:auto;display:inline-block;vertical-align:middle;margin-right:.3rem;" width="96" height="70" loading="lazy" decoding="async" />Endométriose</div></a>
       <a href="machoire.html" style="text-decoration:none;"><div style="background:var(--off);border-radius:50px;padding:.6rem 1.4rem;font-size:.88rem;color:var(--ink2);border:1px solid var(--sage-light);"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#8B6F47" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;margin-right:.3rem;"><path d="M12 5.5C10 3 6 3 5 6c-1 3 0 5 1 7s1 6 2 6 1-3 2-4 2 4 3 4 1-4 2-6 2-4 1-7c-1-3-5-3-4-.5z"/></svg>Mâchoire</div></a>
@@ -475,7 +479,7 @@
   const navLinks = document.getElementById('navLinks');
   burger.addEventListener('click', () => navLinks.classList.toggle('open'));
 
-  // ── Dropdown Spécialités : clic (mobile) et clic (ordi) ──
+  // ── Dropdown Spécialités (repris de index.html) ──
   const hasDrop = document.querySelector('.has-drop');
   const dropToggle = hasDrop.querySelector('.drop-toggle');
   dropToggle.addEventListener('click', function (e) { e.preventDefault(); hasDrop.classList.toggle('open'); });

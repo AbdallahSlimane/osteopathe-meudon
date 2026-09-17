@@ -9,9 +9,13 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
   <style>
-    /* Sécurité responsive : aucune image ne dépasse son conteneur */
+    /* Securite responsive images */
     img { max-width: 100%; }
     img:not([style*="height"]):not([class]) { height: auto; }
+
+    /* Sécurité responsive : aucune image ne dépasse son conteneur */
+    img { max-width: 100%; }
+    img:not([style*="height"]) { height: auto; }
 
     :root { --sage:#8BA185; --sage-dark:#3a5c45; --sage-light:#b8ccb3; --off:#f1ede6; --white:#faf7f2; --ink:#1c2a22; --muted:#637068; --nav-bg:#768A71; --nav-h:66px; }
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }

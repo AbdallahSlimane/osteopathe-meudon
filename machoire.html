@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet"/>
   <style>
-    /* Sécurité responsive : aucune image ne dépasse son conteneur */
+    /* Securite responsive images */
     img { max-width: 100%; }
     img:not([style*="height"]):not([class]) { height: auto; }
 
@@ -58,16 +58,16 @@
     .has-drop.open > .drop-toggle::after { transform: rotate(180deg); }
     .dropdown {
       display: none; position: absolute; top: calc(100% + 8px); left: 0;
-      background: var(--nav-bg); border: 1px solid rgba(255,255,255,.18);
-      border-radius: 10px; min-width: 248px; overflow: hidden;
+      background: var(--nav-bg); border: 1px solid rgba(122,171,142,.2);
+      border-radius: 10px; min-width: 190px; overflow: hidden;
       box-shadow: 0 8px 28px rgba(0,0,0,.25); z-index: 1000;
     }
     .has-drop.open .dropdown { display: block; }
     .dropdown a {
-      display: block; white-space: nowrap; padding: .65rem 1.1rem; font-size: .82rem;
-      color: rgba(255,255,255,.88); transition: background .15s, color .15s;
+      display: block; padding: .65rem 1.1rem; font-size: .82rem;
+      color: rgba(214,236,224,.8); transition: background .15s, color .15s;
     }
-    .dropdown a:hover, .dropdown a:active { background: rgba(255,255,255,.12); color: #fff; }
+    .dropdown a:hover, .dropdown a:active { background: rgba(122,171,142,.15); color: var(--sage); }
     .burger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; }
     .burger span { display: block; width: 24px; height: 2px; background: #fff; border-radius: 2px; }
 
@@ -326,7 +326,7 @@
   <div class="bar rv" style="margin-left:auto;margin-right:auto;margin-bottom:2.5rem;"></div>
   <div class="two-col">
     <div class="col-photo rv" style="aspect-ratio:3/4;">
-      <img src="images/seance-d-osteopathie-cervico-mandibulair.webp" alt="Séance d'ostéopathie cervico-mandibulaire à Meudon" style="width:100%;height:100%;object-fit:cover;object-position:center;" width="800" height="1066" />
+      <img src="images/seance-d-osteopathie-cervico-mandibulair.webp" alt="Séance d'ostéopathie cervico-mandibulaire à Meudon" style="width:100%;height:100%;object-fit:cover;object-position:center;" width="800" height="1066" decoding="async" />
     </div>
     <div class="rv" style="display:flex;flex-direction:column;justify-content:center;">
       <p style="color:var(--muted);font-size:.97rem;margin-bottom:1rem;">En ostéopathie, la prise en charge est <span style="color:#3a5c45;font-weight:500">globale et personnalisée</span> : elle tient compte de l'ensemble des structures en lien avec l'ATM — muscles masticateurs, os du crâne, cervicales, hyoïde… — pour identifier et traiter les causes des tensions.</p>
@@ -355,7 +355,7 @@
   </div>
 
   <div class="quand-item rv">
-    <h3><img src="images/sadam.webp" alt="SADAM" style="width:30px;height:auto;display:inline-block;vertical-align:middle;margin-right:.3rem;" width="96" height="93" /> SADAM – Syndrome algo-dysfonctionnel de l'appareil manducateur<svg class="quand-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></h3>
+    <h3><img src="images/sadam.webp" alt="SADAM" style="width:30px;height:auto;display:inline-block;vertical-align:middle;margin-right:.3rem;" width="96" height="93" decoding="async" /> SADAM – Syndrome algo-dysfonctionnel de l'appareil manducateur<svg class="quand-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></h3>
     <div class="quand-body">
       <p>Le SADAM regroupe un ensemble de <strong>douleurs et de dysfonctionnements de l'ATM</strong> : douleurs à l'ouverture ou à la fermeture de la bouche, craquements, blocages, limitation d'ouverture buccale, douleurs irradiant vers les oreilles ou les tempes.</p>
     <p style="color:var(--sage-dark);font-style:italic;">Une approche ostéopathique permet de travailler sur la mobilité de l'ATM, de relâcher les tensions musculaires et fasciales environnantes, et de <strong>restaurer une meilleure coordination mandibulaire</strong>.</p>
@@ -445,7 +445,7 @@
   const navLinks = document.getElementById('navLinks');
   burger.addEventListener('click', () => navLinks.classList.toggle('open'));
 
-  // ── Dropdown Spécialités : clic (mobile) et clic (ordi) ──
+  // ── Dropdown Spécialités (repris de index.html) ──
   const hasDrop = document.querySelector('.has-drop');
   const dropToggle = hasDrop.querySelector('.drop-toggle');
   dropToggle.addEventListener('click', function (e) { e.preventDefault(); hasDrop.classList.toggle('open'); });
