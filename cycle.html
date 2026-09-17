@@ -4,8 +4,8 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='16' fill='%238BA185'/><text x='32' y='43' font-family='Georgia,serif' font-size='28' font-weight='600' fill='%23FAF7F2' text-anchor='middle'>AD</text></svg>"/>
-  <title>Endométriose & Ostéopathie Meudon – Aurélie Diméglio</title>
-  <meta name="description" content="Prise en charge de l'endométriose par l'ostéopathie à Meudon. Soulager les douleurs pelviennes, les tensions ligamentaires et améliorer la qualité de vie. Aurélie Diméglio, Ostéopathe D.O., membre du <strong>réseau Endo Île-de-France</strong>."/>
+  <title>Règles douloureuses &amp; troubles du cycle – Ostéopathe à Meudon</title>
+  <meta name="description" content="Ostéopathe D.O. à Meudon : accompagnement des règles douloureuses, du syndrome prémenstruel, des douleurs pelviennes et de la périménopause. Cabinet 56-60 rue Henri Barbusse, 92190 Meudon."/>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet"/>
@@ -37,7 +37,6 @@
     img { display: block; max-width: 100%; }
     h1,h2,h3,h4 { font-family: 'Cormorant Garamond', serif; font-weight: 500; line-height: 1.18; }
 
-    /* NAVBAR */
     nav {
       position: sticky; top: 0; z-index: 999;
       height: var(--nav-h);
@@ -72,17 +71,14 @@
     .burger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; }
     .burger span { display: block; width: 24px; height: 2px; background: #fff; border-radius: 2px; }
 
-    /* HELPERS */
     .sec { padding: 5rem 7%; }
     .sec-white { background: var(--white); }
     .sec-off { background: var(--off); }
     .bar { width: 44px; height: 3px; background: linear-gradient(to right, var(--sage-dark), var(--sage)); border-radius: 2px; margin: .9rem 0 1.8rem; }
 
-    /* HERO */
     .hero-text {
       background: var(--off);
-      padding: 4rem 7%;
-      min-height: 200px;
+      padding: 4rem 7%; min-height: 200px;
       display: flex; flex-direction: column; align-items: center; justify-content: center;
       text-align: center;
       border-bottom: 1px solid var(--sage-light);
@@ -91,7 +87,6 @@
     .hero-text
     .hero-text p { color: var(--muted); font-size: 1.05rem; max-width: 720px; margin: 0 auto; }
 
-    /* DEUX COLONNES */
     .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 3.5rem; align-items: center; max-width: 1140px; margin: 0 auto; }
     .col-photo { border-radius: var(--r); overflow: hidden; max-height: 480px; }
     .col-photo img { width: 100%; height: 100%; object-fit: cover; border-radius: var(--r); }
@@ -104,30 +99,17 @@
     }
     .ph svg { opacity: .3; }
 
-    /* BOUTON */
     .btn-green {
       display: inline-flex; align-items: center; gap: .5rem;
       background: var(--sage); color: #fff;
       padding: .85rem 1.8rem; border-radius: 50px;
       font-size: .9rem; font-weight: 500;
-      transition: background .22s, transform .2s;
-      margin-top: 1.5rem;
+      transition: background .22s, transform .2s; margin-top: 1.5rem;
     }
     .btn-green:hover { background: var(--sage-dark); transform: translateY(-2px); }
 
-    /* RESENDO */
-    .resendo {
-      display: inline-flex; align-items: center; gap: .5rem;
-      background: #eaf3f8; border: 1px solid #c5dcea;
-      color: #3a6b80; font-size: .8rem; padding: .4rem 1rem;
-      border-radius: 50px; margin: .6rem 0 1.2rem;
-    }
-
-    /* ITEMS */
-
 .quand-note { font-size: .88rem; color: var(--muted); font-style: italic; text-align: center; margin-top: 1.5rem; }
 
-    /* CONTACT */
     .contact-row { display: flex; align-items: flex-start; gap: 1rem; margin-bottom: 1.4rem; }
     .contact-ico { width: 44px; height: 44px; border-radius: 50%; background: rgba(122,171,142,.25); display: flex; align-items: center; justify-content: center; font-size: 1.15rem; flex-shrink: 0; }
     .contact-row h4 { font-family: 'DM Sans',sans-serif; font-size: .75rem; letter-spacing: .09em; text-transform: uppercase; color: var(--sage-dark); margin-bottom: .25rem; }
@@ -138,22 +120,18 @@
     .map-link { display: inline-flex; align-items: center; gap: .5rem; margin-top: 1rem; font-size: .85rem; color: var(--sage-dark); }
     .map-link:hover { opacity: .8; }
 
-    /* CTA BAND */
     .cta-band {
       background: linear-gradient(to right, var(--off2) 0%, var(--sage-pale) 50%, var(--sage-light) 100%);
       text-align: center; padding: 4rem 8%; color: var(--ink2);
     }
     .cta-band p { opacity: .85; font-size: 1rem; margin-bottom: 1.5rem; }
 
-    /* FOOTER */
     footer { background: #141f19; color: rgba(214,236,224,.45); text-align: center; padding: 2rem 8%; font-size: .8rem; }
     footer a { color: var(--sage); }
 
-    /* REVEAL */
     .rv { opacity: 0; transform: translateY(24px); transition: opacity .65s ease, transform .65s ease; }
     .rv.on { opacity: 1; transform: none; }
 
-    /* RESPONSIVE */
     @media (min-width: 1025px) {
       .burger { display: none; }
       .nav-links { display: flex !important; position: static; flex-direction: row; background: transparent; padding: 0; }
@@ -169,13 +147,13 @@
       .two-col { grid-template-columns: 1fr 1fr; gap: 2.5rem; }
       .col-photo { aspect-ratio: 4/5; }
       .sec { padding: 3.5rem 5%; }
-      .hero-text { padding: 3rem 5%; }
+      .hero-text { padding: 3rem 5%; min-height: 240px; }
     }
     @media (max-width: 560px) {
       .two-col { grid-template-columns: 1fr !important; gap: 2rem; }
       .col-photo { aspect-ratio: 4/3; }
       .sec { padding: 2.5rem 5%; }
-      .hero-text { padding: 2.5rem 5%; }
+      .hero-text { padding: 2.5rem 5%; min-height: 200px; background-position: center 60%; }
       .btn-green { font-size: .85rem; padding: .75rem 1.4rem; }
       .cta-band { padding: 2.5rem 5%; }
       #contact .two-col { grid-template-columns: 1fr !important; }
@@ -310,7 +288,6 @@
 </head>
 <body>
 
-<!-- NAVBAR -->
 <nav>
   <div class="nav-brand">Ostéopathe à Meudon</div>
   <ul class="nav-links" id="navLinks">
@@ -318,10 +295,10 @@
     <li class="has-drop">
       <a href="index.html#pourqui" class="drop-toggle" style="color:#fff;font-weight:600;">Spécialités</a>
       <div class="dropdown">
-        <a href="cycle.html">Règles &amp; cycle</a>
+        <a href="cycle.html" style="color:#fff;font-weight:600;">Règles &amp; cycle</a>
         <a href="femme-enceinte.html">Femme enceinte</a>
         <a href="nourrisson.html">Post-partum &amp; nourrisson</a>
-        <a href="endometriose.html" style="color:#fff;font-weight:600;">Endométriose</a>
+        <a href="endometriose.html">Endométriose</a>
         <a href="machoire.html">Mâchoire (ATM)</a>
       </div>
     </li>
@@ -338,9 +315,10 @@
 
 <!-- HERO -->
 <div class="hero-text rv">
-  <h1>Endométriose</h1>
-  <p>L'ostéopathie peut contribuer à soulager les douleurs, améliorer la mobilité tissulaire et vous accompagner dans une meilleure qualité de vie au quotidien.</p>
-</div>
+    <h1>Règles douloureuses &amp; troubles du cycle</h1>
+    <p>Douleurs de règles, syndrome prémenstruel, douleurs pelviennes, inconforts de la périménopause : ces motifs sont fréquents, souvent banalisés, et rarement accompagnés.</p>
+    <p style="font-size:.85rem;color:var(--muted);margin-top:.8rem;font-style:italic;">Avoir mal pendant ses règles est courant — mais une douleur qui vous empêche de travailler, de dormir ou de bouger n'est pas normale et mérite d'être explorée.</p>
+  </div>
 
 <!-- MON APPROCHE -->
 <section class="sec sec-white" style="border-bottom: 1px solid var(--sage-light);">
@@ -348,15 +326,14 @@
   <div class="bar rv" style="margin-left:auto;margin-right:auto;margin-bottom:2.5rem;"></div>
   <div class="two-col">
     <div class="col-photo rv" style="aspect-ratio:3/4;">
-      <img src="images/aurelie-dimeglio-en-consultation-avec-un.webp" alt="Aurélie Diméglio en consultation avec un patient" style="width:100%;height:100%;object-fit:cover;object-position:center 25%;" width="1000" height="1493" decoding="async" />
+      <img src="images/manipulation-osteopathique-du-bassin.webp" alt="Manipulation ostéopathique du bassin au cabinet de Meudon" style="width:100%;height:100%;object-fit:cover;object-position:center;" width="800" height="1195" loading="lazy" decoding="async" />
     </div>
     <div class="rv" style="display:flex;flex-direction:column;justify-content:center;">
-      <span class="resendo"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#8B6F47" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 22c1.25-1.25 2.5-2.5 3.5-4 4.5-7 8-9 13.5-10.5C17.5 13 15 17 10 19c-1.5.5-3 2-5 3H2z"/><path d="M6 18 12 12"/></svg> Membre Endo Île-de-France — réseau ville-hôpital endométriose en Île-de-France</span>
-      <p style="color:var(--muted);font-size:.97rem;margin-bottom:1rem;">Je fais partie du <strong>réseau Endo Île-de-France</strong>, qui permet une prise en charge pluridisciplinaire de l'endométriose en Île-de-France, en lien avec les équipes hospitalières et les autres professionnels de santé.</p>
-      <p style="color:var(--muted);font-size:.97rem;margin-bottom:1rem;">L'endométriose est une maladie chronique complexe qui affecte l'ensemble du corps : adhérences, inflammations, tensions pelviennes, douleurs lombaires ou digestives. L'ostéopathie intervient de manière <span style="color:#3a5c45;font-weight:500"><strong>complémentaire aux traitements médicaux</strong></span>, sans jamais les remplacer.</p>
+      <p style="color:var(--muted);font-size:.97rem;margin-bottom:1rem;">La consultation commence par un temps d'écoute : rythme du cycle, localisation et intensité des douleurs, retentissement sur votre quotidien, traitements en cours. Cet interrogatoire n'est pas une formalité — il oriente tout le reste.</p>
+      <p style="color:var(--muted);font-size:.97rem;margin-bottom:1rem;">Le travail porte ensuite sur les structures en lien avec la sphère pelvienne. L'objectif est de <span style="color:#3a5c45;font-weight:500">réduire les tensions et les compensations</span> qui entretiennent la douleur.</p>
+      <p style="color:var(--muted);font-size:.97rem;margin-bottom:1.5rem;">Je travaille en <span style="color:#3a5c45;font-weight:500">complémentarité avec votre gynécologue ou votre sage-femme</span>, jamais à leur place.</p>
       <div>
         <a class="btn-green" href="https://www.doctolib.fr/osteopathe/paris/aurelie-dimeglio" target="_blank" rel="noopener">
-          <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="#ffffff" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
           Prendre RDV en ligne
         </a>
       </div>
@@ -364,108 +341,55 @@
   </div>
 </section>
 
-<!-- COMMENT L'OSTÉOPATHIE PEUT AIDER -->
+<!-- QUAND CONSULTER -->
 <section class="sec sec-off quand-section" style="border-bottom: 1px solid var(--sage-light);">
-  <h2 class="rv" style="text-align:center;margin-bottom:.5rem;">Comment l'ostéopathie peut-elle aider ?</h2>
+  <h2 class="rv" style="text-align:center;margin-bottom:.5rem;">Quand consulter ?</h2>
   <div class="bar rv" style="margin-left:auto;margin-right:auto;margin-bottom:2rem;"></div>
 
   <div class="quand-item rv">
-    <h3><img src="images/endometriose.webp" alt="Douleurs pelviennes" style="width:26px;height:auto;display:inline-block;vertical-align:middle;margin-right:.4rem;" width="96" height="70" decoding="async" /> Douleurs pelviennes et dysménorrhées<svg class="quand-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></h3>
+    <h3>Règles douloureuses (dysménorrhée)</h3>
     <div class="quand-body">
-      <p>Les <strong>douleurs menstruelles intenses</strong> et les douleurs pelviennes chroniques peuvent être liées à des tensions des tissus environnants : ligaments utérosacraux, fascias pelviens, muscles du plancher pelvien.</p>
-    <p style="color:var(--sage-dark);font-style:italic;">L'ostéopathie travaille sur la mobilité des structures pelviennes pour aider à réduire les tensions et améliorer le confort au quotidien.</p>
+      <p>Crampes pelviennes, douleurs lombaires irradiant dans les cuisses, nausées, fatigue intense les premiers jours du cycle. Quand la douleur impose de manquer le travail ou les cours, elle sort du cadre de l'inconfort banal.</p>
+      <p style="color:var(--sage-dark);font-style:italic;">L'ostéopathie travaille sur la mobilité du bassin et les tensions lombaires, pour <span style="color:#3a5c45;font-weight:500">réduire l'intensité des douleurs</span> et leur retentissement.</p>
     </div>
   </div>
 
   <div class="quand-item rv">
-    <h3><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#8B6F47" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;margin-right:.4rem;"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg> Adhérences et restrictions de mobilité<svg class="quand-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></h3>
+    <h3>Syndrome prémenstruel (SPM)</h3>
     <div class="quand-body">
-      <p>L'endométriose peut créer des <strong>adhérences entre les organes</strong> — utérus, ovaires, intestins, vessie — limitant leur mobilité et générant des douleurs diffuses.</p>
-    <p style="color:var(--sage-dark);font-style:italic;">Les techniques douces de mobilisation viscérale visent à libérer ces restrictions et à favoriser une meilleure mobilité tissulaire.</p>
+      <p>Ballonnements, tensions mammaires, migraines, troubles du transit, irritabilité dans les jours précédant les règles. Ces symptômes sont souvent minimisés alors qu'ils peuvent occuper la moitié du cycle.</p>
+      <p style="color:var(--sage-dark);font-style:italic;">Le travail viscéral peut aider à <span style="color:#3a5c45;font-weight:500">soulager les inconforts digestifs et les tensions</span> associés à cette période.</p>
     </div>
   </div>
 
   <div class="quand-item rv">
-    <h3><img src="images/craquer.webp" alt="Douleurs lombaires, sciatiques et du coccyx" style="width:26px;height:auto;display:inline-block;vertical-align:middle;margin-right:.4rem;" width="96" height="84" loading="lazy" decoding="async" /> Douleurs lombaires, sciatiques et du coccyx<svg class="quand-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></h3>
+    <h3>Douleurs pelviennes persistantes</h3>
     <div class="quand-body">
-      <p>L'inflammation et les adhérences liées à l'endométriose peuvent irradier vers le dos, les lombaires, le sacrum ou le coccyx, créant des <strong>douleurs chroniques</strong> qui s'étendent au-delà de la sphère pelvienne.</p>
-    <p style="color:var(--sage-dark);font-style:italic;">Une approche globale du rachis et du bassin permet de soulager ces tensions.</p>
+      <p>Douleurs du bas-ventre en dehors des règles, pesanteur pelvienne, douleurs lors des rapports, inconforts après une chirurgie abdominale ou pelvienne.</p>
+      <p style="color:var(--sage-dark);font-style:italic;">Ces douleurs nécessitent <strong>d'abord un avis médical</strong>. Une fois le diagnostic posé, l'ostéopathie peut accompagner la prise en charge en agissant sur les tensions et les adhérences.</p>
     </div>
   </div>
 
   <div class="quand-item rv">
-    <h3><svg width="22" height="22" viewBox="0 0 100 100" fill="none" stroke="#8B6F47" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;margin-right:.4rem;"><path d="M20 15 C20 15 40 15 40 30 C40 45 20 45 20 60 C20 75 40 75 40 85"/><path d="M40 15 C60 15 60 30 60 30 C60 45 40 45 40 60 C40 75 60 75 60 85"/><path d="M60 15 C80 15 80 30 80 30 C80 45 60 45 60 60 C60 75 80 75 80 85"/></svg> Troubles digestifs et inconfort intestinal<svg class="quand-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></h3>
+    <h3>Périménopause et ménopause</h3>
     <div class="quand-body">
-      <p>Les localisations digestives de l'endométriose (côlon, intestin grêle, rectum…) peuvent provoquer des <strong>ballonnements</strong>, des douleurs à la défécation ou des troubles du transit.</p>
-    <p style="color:var(--sage-dark);font-style:italic;">L'ostéopathie viscérale peut contribuer à améliorer le confort digestif en travaillant sur la mobilité des organes et des fascias abdominaux.</p>
-    </div>
-  </div>
-
-  <div class="quand-item rv">
-    <h3><svg width="22" height="22" viewBox="0 0 100 100" fill="none" stroke="#8B6F47" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;margin-right:.4rem;"><circle cx="50" cy="20" r="10"/><path d="M50 30 L50 55"/><path d="M30 45 L50 55 L70 45"/><path d="M50 55 L35 80"/><path d="M50 55 L65 80"/><path d="M10 65 Q30 55 50 65 Q70 55 90 65"/></svg> Stress, fatigue chronique et tension globale<svg class="quand-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></h3>
-    <div class="quand-body">
-      <p>Vivre avec l'endométriose entraîne souvent un <strong>état de tension, une fatigue</strong> et un impact émotionnel fort. Le corps compense, se contracte, s'adapte.</p>
-    <p style="color:var(--sage-dark);font-style:italic;">L'ostéopathie peut <span style='color:#3a5c45;font-weight:500'>favoriser la détente, la récupération</span> et le retour à un <strong>meilleur équilibre global</strong>.</p>
-    </div>
-  </div>
-
-  <div class="quand-item rv">
-    <h3><img src="images/femme-enceinte.webp" alt="Projet de grossesse" style="width:24px;height:auto;display:inline-block;vertical-align:middle;margin-right:.4rem;" width="96" height="153" loading="lazy" decoding="async" /> Endométriose et projet de grossesse<svg class="quand-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></h3>
-    <div class="quand-body">
-      <p>Dans le cadre d'un <strong>projet de grossesse</strong> ou d'une assistance médicale à la procréation (AMP/FIV), l'ostéopathie peut accompagner la préparation du corps en optimisant la mobilité pelvienne et en réduisant les tensions.</p>
-    <p style="color:var(--sage-dark);font-style:italic;">Je travaille en lien avec votre équipe médicale pour un accompagnement complémentaire et adapté à votre parcours.</p>
-    </div>
-  </div>
-
-  <p class="quand-note rv">Liste non exhaustive — n'hésitez pas à me contacter pour toute question sur votre situation.</p>
-  <p class="quand-note rv">L'ostéopathie est une approche complémentaire qui ne remplace pas le suivi gynécologique ou le traitement médical de l'endométriose. En cas de doute, consultez votre médecin ou spécialiste.</p>
-</section>
-
-<!-- CTA -->
-<div class="cta-band rv">
-  <p>Prenez rendez-vous en quelques secondes sur Doctolib.</p>
-  <a class="btn-green" href="https://www.doctolib.fr/osteopathe/paris/aurelie-dimeglio" target="_blank" rel="noopener">
-    <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="#ffffff" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
-    Prendre RDV en ligne
-  </a>
-</div>
-
-<!-- RESTONS EN CONTACT -->
-<section id="contact" class="sec sec-white">
-  <div class="two-col">
-    <div class="rv">
-      <h2>Restons en contact</h2>
-      <div class="bar"></div>
-      <div class="contact-row">
-        <div class="contact-ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#637068" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/><circle cx="8" cy="16" r="1.2" fill="currentColor"/><circle cx="12" cy="16" r="1.2" fill="currentColor"/><circle cx="16" cy="16" r="1.2" fill="currentColor"/></svg></div>
-        <div><h4>Doctolib</h4><a href="https://www.doctolib.fr/osteopathe/paris/aurelie-dimeglio" target="_blank" rel="noopener">Prendre RDV en ligne →</a></div>
-      </div>
-      <div class="contact-row">
-        <div class="contact-ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#637068" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07A19.5 19.5 0 0 1 5.62 13a19.8 19.8 0 0 1-3.07-8.67A2 2 0 0 1 4.53 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.9z"/></svg></div>
-        <div><h4>Téléphone</h4><a href="tel:0745169868">07.45.16.98.68</a></div>
-      </div>
-      <div class="contact-row">
-        <div class="contact-ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#637068" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg></div>
-        <div><h4>E-mail</h4><a href="mailto:dimeglio.osteo@gmail.com">dimeglio.osteo@gmail.com</a></div>
-      </div>
-      <div class="contact-row">
-        <div class="contact-ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#637068" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg></div>
-        <div><h4>Adresse</h4><p>56–60 Rue Henri Barbusse, 92190 Meudon</p></div>
-      </div>
-    </div>
-    <div class="rv">
-      <div class="map-wrap">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2630.5!2d2.2283!3d48.8128!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e67b4f0c3c4a7b%3A0x1!2s56+Rue+Henri+Barbusse%2C+92190+Meudon!5e0!3m2!1sfr!2sfr!4v1" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Cabinet Meudon"></iframe>
-      </div>
-      <a class="map-link" href="https://maps.google.com/?q=56+Rue+Henri+Barbusse+92190+Meudon" target="_blank" rel="noopener">
-        <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="#637068" stroke-width="2"><path d="M12 2C8 2 5 5 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-4-3-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
-        Ouvrir dans Google Maps
-      </a>
+      <p>Douleurs articulaires diffuses, raideurs matinales, troubles du sommeil, migraines, inconforts digestifs : cette période s'accompagne de changements corporels réels, encore peu accompagnés.</p>
+      <p style="color:var(--sage-dark);font-style:italic;">L'ostéopathie n'agit pas sur l'équilibre hormonal, mais elle peut aider à <span style="color:#3a5c45;font-weight:500">préserver la mobilité et limiter les douleurs musculo-squelettiques</span> de cette transition.</p>
     </div>
   </div>
 </section>
 
-<!-- FOOTER -->
+<!-- TRANSPARENCE -->
+<section class="sec sec-white" style="border-bottom: 1px solid var(--sage-light);">
+  <div class="rv" style="max-width:760px;margin:0 auto;">
+    <h2 style="margin-bottom:.5rem;">Ce que l'ostéopathie peut — et ne peut pas — faire</h2>
+    <div class="bar"></div>
+    <p style="color:var(--muted);font-size:.97rem;margin-bottom:1rem;">L'ostéopathie <strong>ne traite pas la cause</strong> d'une endométriose, d'un fibrome, d'un syndrome des ovaires polykystiques ou d'un déséquilibre hormonal. Elle ne remplace ni votre suivi gynécologique, ni vos traitements.</p>
+    <p style="color:var(--muted);font-size:.97rem;margin-bottom:1rem;">Ce qu'elle peut faire : agir sur les <strong>tensions musculaires, les restrictions de mobilité et les compensations posturales</strong> qui accompagnent ces situations et entretiennent la douleur. C'est un levier réel sur le confort quotidien, pas une guérison.</p>
+    <p style="color:var(--sage-dark);font-size:.97rem;font-weight:500;">Des douleurs nouvelles, brutales, ou accompagnées de fièvre, de saignements inhabituels ou d'une perte de poids inexpliquée imposent une consultation médicale sans délai.</p>
+  </div>
+</section>
+
 <footer>
   <p>© 2025 Aurélie Diméglio – Ostéopathe D.O. · 56–60 Rue Henri Barbusse, 92190 Meudon</p>
   <p style="margin-top:.4rem">
