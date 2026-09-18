@@ -284,6 +284,19 @@
       background: rgba(255,255,255,.7);
       box-shadow: 0 4px 16px rgba(0,0,0,.06);
     }
+
+    /* Références scientifiques (notes de bas de section) */
+    .refs { max-width:760px; margin:2.2rem auto 0; padding-top:.9rem; border-top:1px solid var(--sage-pale); }
+    .refs .refs-title { font-size:.63rem; letter-spacing:.14em; text-transform:uppercase; color:var(--sage); font-weight:500; margin:0 0 .5rem; }
+    .refs ol { margin:0; padding-left:1.15rem; }
+    .refs li { font-size:.72rem; line-height:1.65; color:var(--muted); margin-bottom:.35rem; }
+    .refs li em { font-style:italic; }
+    .refs a { color:var(--muted); text-decoration:underline; text-underline-offset:2px; }
+    .refs a:hover { color:var(--sage-dark); }
+    .refs .refs-note { font-size:.72rem; line-height:1.65; color:var(--muted); margin:.6rem 0 0; font-style:italic; }
+    sup.ref-mark { font-size:.6em; line-height:0; }
+    sup.ref-mark a { color:var(--sage-dark); text-decoration:none; font-weight:600; }
+    sup.ref-mark a:hover { text-decoration:underline; }
   </style>
 </head>
 <body>
@@ -350,7 +363,7 @@
     <h3>Règles douloureuses (dysménorrhée)</h3>
     <div class="quand-body">
       <p>Crampes pelviennes, douleurs lombaires irradiant dans les cuisses, nausées, fatigue intense les premiers jours du cycle. Quand la douleur impose de manquer le travail ou les cours, elle sort du cadre de l'inconfort banal.</p>
-      <p style="color:var(--sage-dark);font-style:italic;">L'ostéopathie travaille sur la mobilité du bassin et les tensions lombaires, pour <span style="color:#3a5c45;font-weight:500">réduire l'intensité des douleurs</span> et leur retentissement.</p>
+      <p style="color:var(--sage-dark);font-style:italic;">L'ostéopathie travaille sur la mobilité du bassin et les tensions lombaires pour <span style="color:#3a5c45;font-weight:500">agir sur la douleur</span> et son retentissement. Les données scientifiques sur son effet propre dans la dysménorrhée restent limitées<sup class="ref-mark"><a href="#cy-ref1">1</a></sup> ; l'activité physique régulière, elle, réduit l'intensité des douleurs de règles<sup class="ref-mark"><a href="#cy-ref2">2</a></sup>.</p>
     </div>
   </div>
 
@@ -385,8 +398,16 @@
     <h2 style="margin-bottom:.5rem;">Ce que l'ostéopathie peut — et ne peut pas — faire</h2>
     <div class="bar"></div>
     <p style="color:var(--muted);font-size:.97rem;margin-bottom:1rem;">L'ostéopathie <strong>ne traite pas la cause</strong> d'une endométriose, d'un fibrome, d'un syndrome des ovaires polykystiques ou d'un déséquilibre hormonal. Elle ne remplace ni votre suivi gynécologique, ni vos traitements.</p>
-    <p style="color:var(--muted);font-size:.97rem;margin-bottom:1rem;">Ce qu'elle peut faire : agir sur les <strong>tensions musculaires, les restrictions de mobilité et les compensations posturales</strong> qui accompagnent ces situations et entretiennent la douleur. C'est un levier réel sur le confort quotidien, pas une guérison.</p>
+    <p style="color:var(--muted);font-size:.97rem;margin-bottom:1rem;">Ce qu'elle peut faire : agir sur les <strong>tensions musculaires, les restrictions de mobilité et les compensations du bassin et du dos</strong> qui accompagnent ces situations et entretiennent la douleur. C'est un levier réel sur le confort quotidien, pas une guérison.</p>
     <p style="color:var(--sage-dark);font-size:.97rem;font-weight:500;">Des douleurs nouvelles, brutales, ou accompagnées de fièvre, de saignements inhabituels ou d'une perte de poids inexpliquée imposent une consultation médicale sans délai.</p>
+  <div class="refs rv">
+    <p class="refs-title">Références</p>
+    <ol>
+      <li id="cy-ref1">Proctor ML, Hing W, Johnson TC, Murphy PA, et al. <em>Spinal manipulation for dysmenorrhoea.</em> Cochrane Database Syst Rev. 2006;(3):CD002119. <a href="https://doi.org/10.1002/14651858.CD002119.pub3" target="_blank" rel="noopener">doi</a></li>
+      <li id="cy-ref2">Matthewman G, Lee A, Kaur JG, Daley AJ. <em>Physical activity for primary dysmenorrhea: a systematic review and meta-analysis of randomized controlled trials.</em> Am J Obstet Gynecol. 2018;219(3):255.e1–255.e20. <a href="https://doi.org/10.1016/j.ajog.2018.04.001" target="_blank" rel="noopener">doi</a></li>
+    </ol>
+    <p class="refs-note">La revue Cochrane de référence ne retrouve pas de preuve d'efficacité des manipulations vertébrales sur les douleurs de règles<sup class="ref-mark"><a href="#cy-ref1">1</a></sup> : l'ostéopathie est ici proposée pour le confort et les tensions associées, sans promesse de résultat. L'exercice physique régulier est, lui, associé à une réduction significative de l'intensité des douleurs<sup class="ref-mark"><a href="#cy-ref2">2</a></sup>.</p>
+  </div>
   </div>
 </section>
 

@@ -284,6 +284,19 @@
       background: rgba(255,255,255,.7);
       box-shadow: 0 4px 16px rgba(0,0,0,.06);
     }
+
+    /* Références scientifiques (notes de bas de section) */
+    .refs { max-width:760px; margin:2.2rem auto 0; padding-top:.9rem; border-top:1px solid var(--sage-pale); }
+    .refs .refs-title { font-size:.63rem; letter-spacing:.14em; text-transform:uppercase; color:var(--sage); font-weight:500; margin:0 0 .5rem; }
+    .refs ol { margin:0; padding-left:1.15rem; }
+    .refs li { font-size:.72rem; line-height:1.65; color:var(--muted); margin-bottom:.35rem; }
+    .refs li em { font-style:italic; }
+    .refs a { color:var(--muted); text-decoration:underline; text-underline-offset:2px; }
+    .refs a:hover { color:var(--sage-dark); }
+    .refs .refs-note { font-size:.72rem; line-height:1.65; color:var(--muted); margin:.6rem 0 0; font-style:italic; }
+    sup.ref-mark { font-size:.6em; line-height:0; }
+    sup.ref-mark a { color:var(--sage-dark); text-decoration:none; font-weight:600; }
+    sup.ref-mark a:hover { text-decoration:underline; }
   </style>
 </head>
 <body>
@@ -358,7 +371,7 @@
     <h3><img src="images/sadam.webp" alt="SADAM" style="width:30px;height:auto;display:inline-block;vertical-align:middle;margin-right:.3rem;" width="96" height="93" decoding="async" /> SADAM – Syndrome algo-dysfonctionnel de l'appareil manducateur<svg class="quand-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></h3>
     <div class="quand-body">
       <p>Le SADAM regroupe un ensemble de <strong>douleurs et de dysfonctionnements de l'ATM</strong> : douleurs à l'ouverture ou à la fermeture de la bouche, craquements, blocages, limitation d'ouverture buccale, douleurs irradiant vers les oreilles ou les tempes.</p>
-    <p style="color:var(--sage-dark);font-style:italic;">Une approche ostéopathique permet de travailler sur la mobilité de l'ATM, de relâcher les tensions musculaires et fasciales environnantes, et de <strong>restaurer une meilleure coordination mandibulaire</strong>.</p>
+    <p style="color:var(--sage-dark);font-style:italic;">Une approche ostéopathique permet de travailler sur la mobilité de l'ATM, de relâcher les tensions musculaires et fasciales environnantes, et de <strong>restaurer une meilleure coordination mandibulaire</strong><sup class="ref-mark"><a href="#ma-ref1">1</a></sup>.</p>
     </div>
   </div>
 
@@ -383,6 +396,13 @@
 
 
   <p class="quand-note rv">Liste non exhaustive — n'hésitez pas à me contacter pour toute question sur votre situation.</p>
+  <div class="refs rv">
+    <p class="refs-title">Références</p>
+    <ol>
+      <li id="ma-ref1">Armijo-Olivo S, Pitance L, Singh V, et al. <em>Effectiveness of manual therapy and therapeutic exercise for temporomandibular disorders: systematic review and meta-analysis.</em> Phys Ther. 2016;96(1):9–25. <a href="https://doi.org/10.2522/ptj.20140548" target="_blank" rel="noopener">doi</a></li>
+    </ol>
+    <p class="refs-note">Thérapie manuelle et exercices de la mâchoire et des cervicales améliorent la douleur et l'ouverture buccale dans les troubles de l'ATM ; les essais restent de taille limitée<sup class="ref-mark"><a href="#ma-ref1">1</a></sup>.</p>
+  </div>
 </section>
 
 <!-- CTA -->

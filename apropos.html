@@ -226,6 +226,19 @@
     /* ── Vérification responsive unifiée ── */
     strong { font-weight: 600; }
     .hero-text p strong, .hero-text p span[style] { font-weight: 400; color: inherit; }
+
+    /* Références scientifiques (notes de bas de section) */
+    .refs { max-width:760px; margin:2.2rem auto 0; padding-top:.9rem; border-top:1px solid var(--sage-pale); }
+    .refs .refs-title { font-size:.63rem; letter-spacing:.14em; text-transform:uppercase; color:var(--sage); font-weight:500; margin:0 0 .5rem; }
+    .refs ol { margin:0; padding-left:1.15rem; }
+    .refs li { font-size:.72rem; line-height:1.65; color:var(--muted); margin-bottom:.35rem; }
+    .refs li em { font-style:italic; }
+    .refs a { color:var(--muted); text-decoration:underline; text-underline-offset:2px; }
+    .refs a:hover { color:var(--sage-dark); }
+    .refs .refs-note { font-size:.72rem; line-height:1.65; color:var(--muted); margin:.6rem 0 0; font-style:italic; }
+    sup.ref-mark { font-size:.6em; line-height:0; }
+    sup.ref-mark a { color:var(--sage-dark); text-decoration:none; font-weight:600; }
+    sup.ref-mark a:hover { text-decoration:underline; }
   </style>
 </head>
 <body>
@@ -329,7 +342,7 @@
     <h2 style="margin-bottom:.5rem;">Une approche fondée sur les preuves</h2>
     <div class="bar"></div>
     <p style="margin-bottom:1rem;">Je travaille selon une démarche <strong>evidence-based</strong> : je m'appuie sur les données scientifiques disponibles, et je vous dis aussi clairement ce que l'ostéopathie ne peut pas faire. C'est particulièrement important en santé de la femme, où les promesses excessives sont fréquentes.</p>
-    <p style="margin-bottom:1.6rem;">Concrètement, l'ostéopathie ne traite pas la cause d'une endométriose et ne remplace aucun suivi gynécologique. En revanche, elle agit sur les tensions, les compensations posturales et la douleur qui s'y associent — et cela peut changer beaucoup de choses au quotidien.</p>
+    <p style="margin-bottom:1.6rem;">Concrètement, l'ostéopathie ne traite pas la cause d'une endométriose et ne remplace aucun suivi gynécologique<sup class="ref-mark"><a href="#ap-ref2">2</a></sup>. En revanche, elle agit sur les tensions musculaires, les restrictions de mobilité et la douleur qui s'y associent<sup class="ref-mark"><a href="#ap-ref1">1</a></sup> — et cela peut changer beaucoup de choses au quotidien.</p>
     <p style="font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;color:var(--sage);font-weight:500;margin-bottom:1rem;">Techniques utilisées</p>
     <ul style="list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:.7rem;">
       <li style="padding:.9rem 1.2rem;background:var(--off);border-radius:var(--r);font-size:.88rem;color:var(--ink2);">Techniques structurelles (thrust)</li>
@@ -339,6 +352,14 @@
       <li style="padding:.9rem 1.2rem;background:var(--off);border-radius:var(--r);font-size:.88rem;color:var(--ink2);">Drainage lymphatique manuel</li>
     </ul>
     <p style="font-size:.85rem;color:var(--muted);margin-top:1.2rem;">Le choix des techniques dépend de vous, de votre motif et de vos préférences. Rien n'est imposé, et le « craquement » n'est jamais obligatoire.</p>
+  <div class="refs rv">
+    <p class="refs-title">Références</p>
+    <ol>
+      <li id="ap-ref1">Franke H, Franke JD, Fryer G. <em>Osteopathic manipulative treatment for nonspecific low back pain: a systematic review and meta-analysis.</em> BMC Musculoskelet Disord. 2014;15:286. <a href="https://doi.org/10.1186/1471-2474-15-286" target="_blank" rel="noopener">doi</a></li>
+      <li id="ap-ref2">Becker CM, Bokor A, Heikinheimo O, et al. <em>ESHRE guideline: endometriosis.</em> Hum Reprod Open. 2022;2022(2):hoac009. <a href="https://doi.org/10.1093/hropen/hoac009" target="_blank" rel="noopener">doi</a></li>
+    </ol>
+    <p class="refs-note">Niveau de preuve modéré pour la lombalgie commune<sup class="ref-mark"><a href="#ap-ref1">1</a></sup>. Pour l'endométriose, les recommandations européennes rappellent qu'aucune approche manuelle ne se substitue au traitement médical<sup class="ref-mark"><a href="#ap-ref2">2</a></sup>.</p>
+  </div>
   </div>
 </section>
 

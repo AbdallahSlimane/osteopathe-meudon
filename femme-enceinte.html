@@ -284,6 +284,19 @@
     /* ── Vérification responsive unifiée ── */
     strong { font-weight: 600; }
     .hero-text p strong, .hero-text p span[style] { font-weight: 400; color: inherit; }
+
+    /* Références scientifiques (notes de bas de section) */
+    .refs { max-width:760px; margin:2.2rem auto 0; padding-top:.9rem; border-top:1px solid var(--sage-pale); }
+    .refs .refs-title { font-size:.63rem; letter-spacing:.14em; text-transform:uppercase; color:var(--sage); font-weight:500; margin:0 0 .5rem; }
+    .refs ol { margin:0; padding-left:1.15rem; }
+    .refs li { font-size:.72rem; line-height:1.65; color:var(--muted); margin-bottom:.35rem; }
+    .refs li em { font-style:italic; }
+    .refs a { color:var(--muted); text-decoration:underline; text-underline-offset:2px; }
+    .refs a:hover { color:var(--sage-dark); }
+    .refs .refs-note { font-size:.72rem; line-height:1.65; color:var(--muted); margin:.6rem 0 0; font-style:italic; }
+    sup.ref-mark { font-size:.6em; line-height:0; }
+    sup.ref-mark a { color:var(--sage-dark); text-decoration:none; font-weight:600; }
+    sup.ref-mark a:hover { text-decoration:underline; }
   </style>
 </head>
 <body>
@@ -356,7 +369,7 @@
         <li style="display:flex;gap:.6rem;align-items:flex-start;color:var(--muted);font-size:.92rem;line-height:1.78;"><span style="color:var(--sage);flex-shrink:0;">•</span><span>Lors du <strong>2e ou 3e trimestre</strong> pour soulager les douleurs lombaires, sciatiques, tensions ligamentaires ou pelviennes, mais aussi les troubles digestifs, nausées ou inconforts liés aux changements corporels.</span></li>
         <li style="display:flex;gap:.6rem;align-items:flex-start;color:var(--muted);font-size:.92rem;line-height:1.78;"><span style="color:var(--sage);flex-shrink:0;">•</span><span>Ou bien <strong>en fin de grossesse</strong> pour vous accompagner dans votre projet de naissance : soulager le poids de bébé, travailler la <strong>mobilité du bassin avant l'accouchement</strong>…</span></li>
       </ul>
-      <p style="color:var(--sage-dark);font-style:italic;">L'ostéopathie aide à préserver la mobilité, soulager les douleurs et à préparer le corps à l'accouchement.</p>
+      <p style="color:var(--sage-dark);font-style:italic;">L'ostéopathie aide à préserver la mobilité, soulager les douleurs et à préparer le corps à l'accouchement.<sup class="ref-mark"><a href="#fe-ref1">1</a></sup><sup class="ref-mark"><a href="#fe-ref2">2</a></sup></p>
     </div>
     </div>
     <div class="quand-item">
@@ -368,6 +381,14 @@
     </div>
   </div>
   <p class="rv" style="font-size:.88rem;color:var(--muted);font-style:italic;text-align:center;margin-top:1.5rem;">Liste non exhaustive — n'hésitez pas à me contacter pour toute question sur votre situation.</p>
+  <div class="refs rv">
+    <p class="refs-title">Références</p>
+    <ol>
+      <li id="fe-ref1">Franke H, Franke JD, Belz S, Fryer G. <em>Osteopathic manipulative treatment for low back and pelvic girdle pain during and after pregnancy: a systematic review and meta-analysis.</em> J Bodyw Mov Ther. 2017;21(4):752–762. <a href="https://doi.org/10.1016/j.jbmt.2017.05.014" target="_blank" rel="noopener">doi</a></li>
+      <li id="fe-ref2">Liddle SD, Pennick V. <em>Interventions for preventing and treating low-back and pelvic pain during pregnancy.</em> Cochrane Database Syst Rev. 2015;(9):CD001139. <a href="https://doi.org/10.1002/14651858.CD001139.pub4" target="_blank" rel="noopener">doi</a></li>
+    </ol>
+    <p class="refs-note">Les douleurs lombaires et de ceinture pelvienne sont le motif le mieux documenté : effet modéré sur la douleur et la fonction<sup class="ref-mark"><a href="#fe-ref1">1</a></sup>, au sein d'une prise en charge où l'exercice physique garde une place centrale<sup class="ref-mark"><a href="#fe-ref2">2</a></sup>. Pour les nausées, les troubles digestifs et la préparation à l'accouchement, les données restent insuffisantes pour conclure.</p>
+  </div>
 </section>
 
 <!-- ════ CTA ════ -->
