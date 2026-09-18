@@ -31,7 +31,8 @@
     main { max-width: 780px; margin: 0 auto; padding: 4rem 6%; }
     .label { font-size: .75rem; letter-spacing: .12em; text-transform: uppercase; color: var(--sage); font-weight: 500; display: block; margin-bottom: .8rem; }
     p { color: var(--muted); margin-bottom: .9rem; font-size: .95rem; }
-    table { width: 100%; border-collapse: collapse; margin: 1rem 0 1.5rem; font-size: .88rem; }
+    .table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 1rem 0 1.5rem; }
+    table { width: 100%; border-collapse: collapse; font-size: .88rem; }
     th { background: var(--sage-dark); color: #fff; padding: .6rem 1rem; text-align: left; }
     td { padding: .6rem 1rem; border-bottom: 1px solid var(--sage-light); color: var(--muted); vertical-align: top; }
     tr:nth-child(even) td { background: var(--off); }
@@ -59,12 +60,14 @@
   <h2>Les cookies utilisés sur ce site</h2>
   <p>Ce site utilise uniquement des cookies liés aux outils Google, dans le but de mesurer la fréquentation du site et d'améliorer la pertinence des annonces publicitaires.</p>
 
+  <div class="table-wrap">
   <table>
     <tr><th>Cookie</th><th>Fournisseur</th><th>Finalité</th><th>Durée</th></tr>
     <tr><td>_gcl_au</td><td>Google Ads</td><td>Mesure des conversions publicitaires</td><td>90 jours</td></tr>
     <tr><td>_gads</td><td>Google Ads</td><td>Ciblage publicitaire</td><td>13 mois</td></tr>
     <tr><td>IDE</td><td>Google DoubleClick</td><td>Publicité personnalisée</td><td>13 mois</td></tr>
   </table>
+  </div>
 
   <h2>Votre consentement</h2>
   <p>Conformément au RGPD et aux recommandations de la CNIL, ces cookies ne sont déposés qu'après votre consentement explicite via le bandeau d'information affiché lors de votre première visite.</p>
