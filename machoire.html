@@ -458,6 +458,16 @@
   </p>
 </footer>
 
+<!-- BANDEAU COOKIES (le script de consentement en bas de page s'appuie sur ces id) -->
+<div id="cookie-banner" role="dialog" aria-live="polite" aria-label="Gestion des cookies">
+  <p>Ce site utilise des cookies de mesure d'audience et publicitaires (Google, Meta), déposés uniquement avec votre accord. <a href="politique-cookies.html">En savoir plus</a></p>
+  <div class="cookie-btns">
+    <button class="cookie-btn cookie-refuse" id="cookieRefuse" type="button">Refuser</button>
+    <button class="cookie-btn cookie-accept" id="cookieAccept" type="button">Accepter</button>
+  </div>
+</div>
+
+
 <script>
   const burger = document.getElementById('burger');
   const navLinks = document.getElementById('navLinks');
@@ -530,14 +540,17 @@
     } catch(e) {}
   }
 
-  // ── CONVERSION : clic vers Doctolib (la prise de RDV se fait hors site) ──
+  // ── CONVERSIONS : prise de RDV hors site (Doctolib) ou par telephone ──
+  //    GA4 : clic_doctolib / clic_telephone -> a marquer comme evenements cles,
+  //    puis a importer dans Google Ads comme conversions.
   (function() {
     try {
       document.addEventListener('click', function(ev) {
-        var a = ev.target && ev.target.closest ? ev.target.closest('a[href*="doctolib.fr"]') : null;
+        var a = ev.target && ev.target.closest ? ev.target.closest('a[href*="doctolib.fr"], a[href^="tel:"]') : null;
         if (!a) return;
-        if (window.fbq) { try { fbq('track', 'Lead', { content_name: 'Clic Doctolib' }); } catch(e) {} }
-        if (window.gtag) { try { gtag('event', 'clic_doctolib', { event_category: 'rendez-vous' }); } catch(e) {} }
+        var tel = a.getAttribute('href').indexOf('tel:') === 0;
+        if (window.fbq) { try { fbq('track', tel ? 'Contact' : 'Lead', { content_name: tel ? 'Clic telephone' : 'Clic Doctolib' }); } catch(e) {} }
+        if (window.gtag) { try { gtag('event', tel ? 'clic_telephone' : 'clic_doctolib', { event_category: 'rendez-vous' }); } catch(e) {} }
       }, true);
     } catch(e) {}
   })();

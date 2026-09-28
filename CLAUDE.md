@@ -33,11 +33,11 @@ When creating a new specialty page, copy an existing specialty page (e.g. `macho
 
 ## Tracking & consent
 
-All tracking is **gated behind the cookie banner**. Each of the 7 content pages carries, in its own `<script>` block, `loadGoogleAds()` (which configures both Google Ads `AW-17093333197` and Google Analytics 4 `G-VBXKQSZQS9` on one gtag.js, after a Consent Mode v2 `consent default granted` call) and `loadMetaPixel()`, called from exactly two places: on load when consent is already `accepted`, and in the "Accepter" click handler. Adding a new tag means adding a `loadXxx()` function and both call sites, on every page.
+All tracking is **gated behind the cookie banner**. The banner is a `<div id="cookie-banner">` with buttons `#cookieAccept` / `#cookieRefuse`, placed right after `</footer>` on each of the 7 content pages. **It was missing from the HTML from July to September 2026** (CSS and JS present, element absent), so the consent script returned early and no tag ever loaded. If you touch the footer, keep this element. Each of the 7 content pages carries, in its own `<script>` block, `loadGoogleAds()` (which configures both Google Ads `AW-17093333197` and Google Analytics 4 `G-VBXKQSZQS9` on one gtag.js, after a Consent Mode v2 `consent default granted` call) and `loadMetaPixel()`, called from exactly two places: on load when consent is already `accepted`, and in the "Accepter" click handler. Adding a new tag means adding a `loadXxx()` function and both call sites, on every page.
 
 The **Meta Pixel ID is a placeholder** (`var META_PIXEL_ID = 'VOTRE_ID_PIXEL';`). The loader returns early while it holds that value, so nothing is sent until a real ID is pasted in — on all 7 pages.
 
-The **conversion event is the Doctolib click**, since appointments are booked off-site where no pixel can be placed. A delegated listener on `a[href*="doctolib.fr"]` fires `fbq('track','Lead')` and `gtag('event','clic_doctolib')`.
+The **conversion event is the Doctolib click**, since appointments are booked off-site where no pixel can be placed. A delegated listener on `a[href*="doctolib.fr"]` fires `fbq('track','Lead')` and `gtag('event','clic_doctolib')`; the same listener catches `a[href^="tel:"]` and fires `fbq('track','Contact')` and `gtag('event','clic_telephone')`. Both GA4 events are meant to be marked as key events and imported into Google Ads as conversions (the Google Ads campaign bids on conversions).
 
 `politique-cookies.html` must list every cookie actually deposited (Google *and* Meta) plus the out-of-EU transfer notice — update it whenever a tag is added or removed.
 
