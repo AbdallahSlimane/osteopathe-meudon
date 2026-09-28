@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='16' fill='%238BA185'/><text x='32' y='43' font-family='Georgia,serif' font-size='28' font-weight='600' fill='%23FAF7F2' text-anchor='middle'>AD</text></svg>"/>
+  <title>Règles douloureuses &amp; troubles du cycle – Ostéopathe à Meudon</title>
+  <meta name="description" content="Ostéopathe D.O. à Meudon : accompagnement des règles douloureuses, du syndrome prémenstruel, des douleurs pelviennes et de la périménopause. Cabinet 56-60 rue Henri Barbusse, 92190 Meudon."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet"/>
+  <style>
+    /* Securite responsive images */
+    img { max-width: 100%; }
+    img:not([style*="height"]):not([class]) { height: auto; }
+
+    :root {
+      --sage:       #8BA185;
+      --sage-dark:  #3a5c45;
+      --sage-light: #b8ccb3;
+      --sage-pale:  #dce6da;
+      --white:      #faf7f2;
+      --off:        #f1ede6;
+      --off2:       #e6e0d5;
+      --ink:        #1c2a22;
+      --ink2:       #2e4038;
+      --muted:      #637068;
+      --nav-bg:     #768A71;
+      --nav-h:      66px;
+      --r:          14px;
+      --sh:         0 4px 32px rgba(28,42,34,.10);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body { font-family: 'DM Sans', sans-serif; background: var(--white); color: var(--ink); line-height: 1.75; }
+    a { color: inherit; text-decoration: none; }
+    img { display: block; max-width: 100%; }
+    h1,h2,h3,h4 { font-family: 'Cormorant Garamond', serif; font-weight: 500; line-height: 1.18; }
+
+    nav {
+      position: sticky; top: 0; z-index: 999;
+      height: var(--nav-h);
+      background: var(--nav-bg);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 5%;
+      box-shadow: 0 2px 20px rgba(0,0,0,.22);
+    }
+    .nav-brand { color: #fff; font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; letter-spacing: .03em; font-weight: 600; white-space: nowrap; }
+    .nav-links { list-style: none; display: flex; align-items: center; gap: 1.8rem; }
+    .nav-links a { color: rgba(255,255,255,.88); font-size: .82rem; letter-spacing: .07em; text-transform: uppercase; transition: color .2s; }
+    .nav-links a:hover { color: #fff; }
+    .nav-rdv { background: var(--sage); color: #fff !important; padding: .42rem 1.1rem; border-radius: 50px; font-weight: 500; transition: background .2s !important; }
+    .nav-rdv:hover { background: var(--sage-dark) !important; }
+
+    .has-drop { position: relative; }
+    .has-drop > .drop-toggle { cursor: pointer; display: flex; align-items: center; gap: .3rem; }
+    .has-drop > .drop-toggle::after { content: '▾'; font-size: .7rem; opacity: .6; transition: transform .2s; }
+    .has-drop.open > .drop-toggle::after { transform: rotate(180deg); }
+    .dropdown {
+      display: none; position: absolute; top: calc(100% + 8px); left: 0;
+      background: var(--nav-bg); border: 1px solid rgba(122,171,142,.2);
+      border-radius: 10px; min-width: 190px; overflow: hidden;
+      box-shadow: 0 8px 28px rgba(0,0,0,.25); z-index: 1000;
+    }
+    .has-drop.open .dropdown { display: block; }
+    .dropdown a {
+      display: block; padding: .65rem 1.1rem; font-size: .82rem;
+      color: rgba(214,236,224,.8); transition: background .15s, color .15s;
+    }
+    .dropdown a:hover, .dropdown a:active { background: rgba(122,171,142,.15); color: var(--sage); }
+    .burger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; }
+    .burger span { display: block; width: 24px; height: 2px; background: #fff; border-radius: 2px; }
+
+    .sec { padding: 5rem 7%; }
+    .sec-white { background: var(--white); }
+    .sec-off { background: var(--off); }
+    .bar { width: 44px; height: 3px; background: linear-gradient(to right, var(--sage-dark), var(--sage)); border-radius: 2px; margin: .9rem 0 1.8rem; }
+
+    .hero-text {
+      background: var(--off);
+      padding: 4rem 7%; min-height: 200px;
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      text-align: center;
+      border-bottom: 1px solid var(--sage-light);
+      border-top: 1px solid var(--sage-light);
+    }
+    .hero-text
+    .hero-text p { color: var(--muted); font-size: 1.05rem; max-width: 720px; margin: 0 auto; }
+
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 3.5rem; align-items: center; max-width: 1140px; margin: 0 auto; }
+    .col-photo { border-radius: var(--r); overflow: hidden; max-height: 480px; }
+    .col-photo img { width: 100%; height: 100%; object-fit: cover; border-radius: var(--r); }
+    .ph {
+      background: linear-gradient(140deg, var(--sage-light), var(--off2));
+      border-radius: var(--r); display: flex; flex-direction: column;
+      align-items: center; justify-content: center; gap: .8rem;
+      color: var(--muted); font-size: .85rem; text-align: center;
+      height: 100%; min-height: 400px; padding: 2rem;
+    }
+    .ph svg { opacity: .3; }
+
+    .btn-green {
+      display: inline-flex; align-items: center; gap: .5rem;
+      background: var(--sage); color: #fff;
+      padding: .85rem 1.8rem; border-radius: 50px;
+      font-size: .9rem; font-weight: 500;
+      transition: background .22s, transform .2s; margin-top: 1.5rem;
+    }
+    .btn-green:hover { background: var(--sage-dark); transform: translateY(-2px); }
+
+.quand-note { font-size: .88rem; color: var(--muted); font-style: italic; text-align: center; margin-top: 1.5rem; }
+
+    .contact-row { display: flex; align-items: flex-start; gap: 1rem; margin-bottom: 1.4rem; }
+    .contact-ico { width: 44px; height: 44px; border-radius: 50%; background: rgba(122,171,142,.25); display: flex; align-items: center; justify-content: center; font-size: 1.15rem; flex-shrink: 0; }
+    .contact-row h4 { font-family: 'DM Sans',sans-serif; font-size: .75rem; letter-spacing: .09em; text-transform: uppercase; color: var(--sage-dark); margin-bottom: .25rem; }
+    .contact-row a, .contact-row p { font-size: .9rem; color: var(--muted); }
+    .contact-row a:hover { color: var(--sage-dark); }
+    .map-wrap { border-radius: var(--r); overflow: hidden; aspect-ratio: 4/3; box-shadow: 0 4px 24px rgba(0,0,0,.1); }
+    .map-wrap iframe { width: 100%; height: 100%; border: 0; }
+    .map-link { display: inline-flex; align-items: center; gap: .5rem; margin-top: 1rem; font-size: .85rem; color: var(--sage-dark); }
+    .map-link:hover { opacity: .8; }
+
+    .cta-band {
+      background: linear-gradient(to right, var(--off2) 0%, var(--sage-pale) 50%, var(--sage-light) 100%);
+      text-align: center; padding: 4rem 8%; color: var(--ink2);
+    }
+    .cta-band p { opacity: .85; font-size: 1rem; margin-bottom: 1.5rem; }
+
+    footer { background: #141f19; color: rgba(214,236,224,.45); text-align: center; padding: 2rem 8%; font-size: .8rem; }
+    footer a { color: var(--sage); }
+
+    .rv { opacity: 0; transform: translateY(24px); transition: opacity .65s ease, transform .65s ease; }
+    .rv.on { opacity: 1; transform: none; }
+
+    @media (min-width: 1025px) {
+      .burger { display: none; }
+      .nav-links { display: flex !important; position: static; flex-direction: row; background: transparent; padding: 0; }
+    }
+    @media (max-width: 1024px) {
+      .nav-links { display: none; flex-direction: column; position: absolute; top: var(--nav-h); left: 0; right: 0; background: var(--nav-bg); padding: 1.5rem 6%; gap: .9rem; z-index: 998; }
+      .nav-links.open { display: flex; }
+      .dropdown { position: static; box-shadow: none; border: none; background: transparent; padding-left: 1rem; }
+      .burger { display: flex; }
+      .nav-links a { color: #fff; opacity: .9; }
+    }
+    @media (max-width: 1024px) and (min-width: 561px) {
+      .two-col { grid-template-columns: 1fr 1fr; gap: 2.5rem; }
+      .col-photo { aspect-ratio: 4/5; }
+      .sec { padding: 3.5rem 5%; }
+      .hero-text { padding: 3rem 5%; min-height: 240px; }
+    }
+    @media (max-width: 560px) {
+      .two-col { grid-template-columns: 1fr !important; gap: 2rem; }
+      .col-photo { aspect-ratio: 4/3; }
+      .sec { padding: 2.5rem 5%; }
+      .hero-text { padding: 2.5rem 5%; min-height: 200px; background-position: center 60%; }
+      .btn-green { font-size: .85rem; padding: .75rem 1.4rem; }
+      .cta-band { padding: 2.5rem 5%; }
+      #contact .two-col { grid-template-columns: 1fr !important; }
+    }
+
+  /* ── COOKIE BANNER ── */
+  #cookie-banner {
+    position: fixed;
+    bottom: 0; left: 0; right: 0;
+    z-index: 9999;
+    background: #fff;
+    border-top: 2px solid var(--sage-light, #b8ccb3);
+    box-shadow: 0 -4px 24px rgba(28,42,34,.12);
+    padding: 1.2rem 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    font-family: 'DM Sans', sans-serif;
+    font-size: .88rem;
+    color: #2e4038;
+    transform: translateY(100%);
+    transition: transform .4s ease;
+  }
+  #cookie-banner.visible { transform: translateY(0); }
+  #cookie-banner p { flex: 1; min-width: 220px; line-height: 1.6; }
+  #cookie-banner a { color: #3a5c45; text-decoration: underline; }
+  .cookie-btns { display: flex; gap: .75rem; flex-shrink: 0; flex-wrap: wrap; }
+  .cookie-btn {
+    padding: .55rem 1.2rem; border-radius: 50px; font-size: .85rem;
+    font-weight: 500; cursor: pointer; border: none; transition: all .2s;
+    font-family: 'DM Sans', sans-serif;
+  }
+  .cookie-accept { background: #768A71; color: #fff; }
+  .cookie-accept:hover { background: #3a5c45; }
+  .cookie-refuse { background: transparent; color: #637068; border: 1.5px solid #b8ccb3; }
+  .cookie-refuse:hover { background: #f2ede6; }
+  @media (max-width: 560px) {
+    #cookie-banner { flex-direction: column; align-items: flex-start; padding: 1.2rem 5% 1.5rem; }
+    .cookie-btns { width: 100%; }
+    .cookie-btn { flex: 1; text-align: center; }
+  }
+
+    /* ══ TYPOGRAPHIE UNIFIÉE ══ */
+    /* H1 — Grand titre de page */
+    h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.2rem, 4.5vw, 3.2rem);
+      font-weight: 400;
+      line-height: 1.15;
+      letter-spacing: -.01em;
+      color: var(--ink);
+    }
+    /* H2 — Titre de section */
+    h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.7rem, 3vw, 2.3rem);
+      font-weight: 600;
+      line-height: 1.18;
+      color: var(--ink2);
+    }
+    /* H3 — Sous-titre */
+    h3 {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 1.05rem;
+      font-weight: 600;
+      line-height: 1.3;
+      color: var(--ink2);
+      letter-spacing: .01em;
+    }
+    /* Corps de texte */
+    p, li {
+      font-family: 'DM Sans', sans-serif;
+      font-size: .97rem;
+      font-weight: 400;
+      line-height: 1.78;
+    }
+    /* Label (petit texte au-dessus des titres) */
+    .label {
+      font-family: 'DM Sans', sans-serif;
+      font-size: .72rem;
+      font-weight: 500;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--sage);
+    }
+
+    /* ── Vérification responsive unifiée ── */
+    strong { font-weight: 600; }
+    .hero-text p strong, .hero-text p span[style] { font-weight: 400; color: inherit; }
+
+    /* Effet hover/actif pour Quand consulter */
+    .quand-item {
+      transition: padding .25s, background .25s, box-shadow .25s;
+      border-radius: var(--r);
+      cursor: pointer;
+      padding: 1rem 1.2rem;
+      margin-bottom: 1rem;
+      border: 1px solid var(--sage-light);
+      background: rgba(255,255,255,.35);
+    }
+    .quand-item:last-child { margin-bottom: 0; }
+    .quand-item h3 {
+      display: flex;
+      align-items: center;
+      margin: 0;
+    }
+    .quand-item .quand-chevron {
+      margin-left: auto;
+      transition: transform .3s;
+      flex-shrink: 0;
+      color: var(--muted);
+    }
+    .quand-item .quand-body {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height .4s ease, margin-top .4s ease;
+    }
+    .quand-item.open .quand-body {
+      max-height: 400px;
+      margin-top: .9rem;
+    }
+    .quand-item.open .quand-chevron {
+      transform: rotate(180deg);
+    }
+    .quand-item.open {
+      background: rgba(255,255,255,.7);
+      box-shadow: 0 4px 16px rgba(0,0,0,.06);
+    }
+
+    /* Références scientifiques (notes de bas de section) */
+    .refs { max-width:760px; margin:2.2rem auto 0; padding-top:.9rem; border-top:1px solid var(--sage-pale); }
+    .refs .refs-title { font-size:.63rem; letter-spacing:.14em; text-transform:uppercase; color:var(--sage); font-weight:500; margin:0 0 .5rem; }
+    .refs ol { margin:0; padding-left:1.15rem; }
+    .refs li { font-size:.72rem; line-height:1.65; color:var(--muted); margin-bottom:.35rem; }
+    .refs li em { font-style:italic; }
+    .refs a { color:var(--muted); text-decoration:underline; text-underline-offset:2px; }
+    .refs a:hover { color:var(--sage-dark); }
+    sup.ref-mark { font-size:.6em; line-height:0; }
+    sup.ref-mark a { color:var(--sage-dark); text-decoration:none; font-weight:600; }
+    sup.ref-mark a:hover { text-decoration:underline; }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-brand">Ostéopathe à Meudon</div>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Accueil</a></li>
+    <li class="has-drop">
+      <a href="index.html#pourqui" class="drop-toggle" style="color:#fff;font-weight:600;">Spécialités</a>
+      <div class="dropdown">
+        <a href="cycle.html" style="color:#fff;font-weight:600;">Règles &amp; cycle</a>
+        <a href="femme-enceinte.html">Femme enceinte</a>
+        <a href="nourrisson.html">Post-partum &amp; nourrisson</a>
+        <a href="endometriose.html">Endométriose</a>
+        <a href="machoire.html">Mâchoire (ATM)</a>
+      </div>
+    </li>
+    <li><a href="index.html#avis">Avis</a></li>
+    <li><a href="index.html#tarifs">Tarifs</a></li>
+    <li><a href="apropos.html">À propos</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+    <li><a class="nav-rdv" href="https://www.doctolib.fr/osteopathe/paris/aurelie-dimeglio" target="_blank" rel="noopener">Prendre RDV</a></li>
+  </ul>
+  <button class="burger" id="burger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- HERO -->
+<div class="hero-text rv">
+    <h1>Règles douloureuses &amp; troubles du cycle</h1>
+    <p>Douleurs de règles, syndrome prémenstruel, douleurs pelviennes, inconforts de la périménopause : ces motifs sont fréquents, souvent banalisés, et rarement accompagnés.</p>
+    <p style="font-size:.85rem;color:var(--muted);margin-top:.8rem;font-style:italic;">Avoir mal pendant ses règles est courant — mais une douleur qui vous empêche de travailler, de dormir ou de bouger n'est pas normale et mérite d'être explorée.</p>
+  </div>
+
+<!-- MON APPROCHE -->
+<section class="sec sec-white" style="border-bottom: 1px solid var(--sage-light);">
+  <h2 class="rv" style="text-align:center;margin-bottom:.5rem;">Mon approche</h2>
+  <div class="bar rv" style="margin-left:auto;margin-right:auto;margin-bottom:2.5rem;"></div>
+  <div class="two-col">
+    <div class="col-photo rv" style="aspect-ratio:3/4;">
+      <img src="images/seance-osteopathie-cervicale-au-cabinet-de-meudon.webp" alt="Séance d'ostéopathie cervicale au cabinet de Meudon" style="width:100%;height:100%;object-fit:cover;object-position:center;" width="800" height="1195" loading="lazy" decoding="async" />
+    </div>
+    <div class="rv" style="display:flex;flex-direction:column;justify-content:center;">
+      <p style="color:var(--muted);font-size:.97rem;margin-bottom:1rem;">La consultation commence par un temps d'écoute : rythme du cycle, localisation et intensité des douleurs, retentissement sur votre quotidien, traitements en cours. Cet interrogatoire n'est pas une formalité — il oriente tout le reste.</p>
+      <p style="color:var(--muted);font-size:.97rem;margin-bottom:1rem;">Le travail porte ensuite sur les structures en lien avec la sphère pelvienne. L'objectif est de <span style="color:#3a5c45;font-weight:500">réduire les tensions et les compensations</span> qui entretiennent la douleur.</p>
+      <p style="color:var(--muted);font-size:.97rem;margin-bottom:1.5rem;">Je travaille en <span style="color:#3a5c45;font-weight:500">complémentarité avec votre gynécologue ou votre sage-femme</span>, jamais à leur place.</p>
+      <div>
+        <a class="btn-green" href="https://www.doctolib.fr/osteopathe/paris/aurelie-dimeglio" target="_blank" rel="noopener">
+          Prendre RDV en ligne
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- QUAND CONSULTER -->
+<section class="sec sec-off quand-section" style="border-bottom: 1px solid var(--sage-light);">
+  <h2 class="rv" style="text-align:center;margin-bottom:.5rem;">Quand consulter ?</h2>
+  <div class="bar rv" style="margin-left:auto;margin-right:auto;margin-bottom:2rem;"></div>
+
+  <div class="quand-item rv">
+    <h3>Règles douloureuses (dysménorrhée)</h3>
+    <div class="quand-body">
+      <p>Crampes pelviennes, douleurs lombaires irradiant dans les cuisses, nausées, fatigue intense les premiers jours du cycle. Quand la douleur impose de manquer le travail ou les cours, elle sort du cadre de l'inconfort banal.</p>
+      <p style="color:var(--sage-dark);font-style:italic;">L'ostéopathie travaille sur la mobilité du bassin et les tensions lombaires pour <span style="color:#3a5c45;font-weight:500">agir sur la douleur</span> et son retentissement. Les données scientifiques sur son effet propre dans la dysménorrhée restent limitées<sup class="ref-mark"><a href="#cy-ref1">1</a></sup> ; l'activité physique régulière, elle, réduit l'intensité des douleurs de règles<sup class="ref-mark"><a href="#cy-ref2">2</a></sup>.</p>
+    </div>
+  </div>
+
+  <div class="quand-item rv">
+    <h3>Syndrome prémenstruel (SPM)</h3>
+    <div class="quand-body">
+      <p>Ballonnements, tensions mammaires, migraines, troubles du transit, irritabilité dans les jours précédant les règles. Ces symptômes sont souvent minimisés alors qu'ils peuvent occuper la moitié du cycle.</p>
+      <p style="color:var(--sage-dark);font-style:italic;">Le travail viscéral peut aider à <span style="color:#3a5c45;font-weight:500">soulager les inconforts digestifs et les tensions</span> associés à cette période.</p>
+    </div>
+  </div>
+
+  <div class="quand-item rv">
+    <h3>Douleurs pelviennes persistantes</h3>
+    <div class="quand-body">
+      <p>Douleurs du bas-ventre en dehors des règles, pesanteur pelvienne, douleurs lors des rapports, inconforts après une chirurgie abdominale ou pelvienne.</p>
+      <p style="color:var(--sage-dark);font-style:italic;">Ces douleurs nécessitent <strong>d'abord un avis médical</strong>. Une fois le diagnostic posé, l'ostéopathie peut accompagner la prise en charge en agissant sur les tensions et les adhérences.</p>
+    </div>
+  </div>
+
+  <div class="quand-item rv">
+    <h3>Périménopause et ménopause</h3>
+    <div class="quand-body">
+      <p>Douleurs articulaires diffuses, raideurs matinales, troubles du sommeil, migraines, inconforts digestifs : cette période s'accompagne de changements corporels réels, encore peu accompagnés.</p>
+      <p style="color:var(--sage-dark);font-style:italic;">L'ostéopathie n'agit pas sur l'équilibre hormonal, mais elle peut aider à <span style="color:#3a5c45;font-weight:500">préserver la mobilité et limiter les douleurs musculo-squelettiques</span> de cette transition.</p>
+    </div>
+  </div>
+</section>
+
+<!-- TRANSPARENCE -->
+<section class="sec sec-white" style="border-bottom: 1px solid var(--sage-light);">
+  <div class="rv" style="max-width:760px;margin:0 auto;">
+    <h2 style="margin-bottom:.5rem;">Ce que l'ostéopathie peut — et ne peut pas — faire</h2>
+    <div class="bar"></div>
+    <p style="color:var(--muted);font-size:.97rem;margin-bottom:1rem;">L'ostéopathie <strong>ne traite pas la cause</strong> d'une endométriose, d'un fibrome, d'un syndrome des ovaires polykystiques ou d'un déséquilibre hormonal. Elle ne remplace ni votre suivi gynécologique, ni vos traitements.</p>
+    <p style="color:var(--muted);font-size:.97rem;margin-bottom:1rem;">Ce qu'elle peut faire : agir sur les <strong>tensions musculaires, les restrictions de mobilité et les compensations du bassin et du dos</strong> qui accompagnent ces situations et entretiennent la douleur. C'est un levier réel sur le confort quotidien, pas une guérison.</p>
+    <p style="color:var(--sage-dark);font-size:.97rem;font-weight:500;">Des douleurs nouvelles, brutales, ou accompagnées de fièvre, de saignements inhabituels ou d'une perte de poids inexpliquée imposent une consultation médicale sans délai.</p>
+  <div class="refs rv">
+    <p class="refs-title">Références</p>
+    <ol>
+      <li id="cy-ref1"><em>Spinal manipulation for dysmenorrhoea</em> — Proctor et al., 2006. <a href="https://doi.org/10.1002/14651858.CD002119.pub3" target="_blank" rel="noopener">doi</a></li>
+      <li id="cy-ref2"><em>Physical activity for primary dysmenorrhea: a systematic review and meta-analysis of randomized controlled trials</em> — Matthewman et al., 2018. <a href="https://doi.org/10.1016/j.ajog.2018.04.001" target="_blank" rel="noopener">doi</a></li>
+    </ol>
+  </div>
+  </div>
+</section>
+
+<footer>
+  <p>© 2025 Aurélie Diméglio – Ostéopathe D.O. · 56–60 Rue Henri Barbusse, 92190 Meudon</p>
+  <p style="margin-top:.4rem">
+    <a href="https://www.doctolib.fr/osteopathe/paris/aurelie-dimeglio" target="_blank" rel="noopener">Doctolib</a>
+    &nbsp;·&nbsp;
+    <a href="mailto:dimeglio.osteo@gmail.com">dimeglio.osteo@gmail.com</a>
+    &nbsp;·&nbsp;
+    <a href="index.html">Retour à l'accueil</a>
+  </p>
+</footer>
+
+<!-- BANDEAU COOKIES (le script de consentement en bas de page s'appuie sur ces id) -->
+<div id="cookie-banner" role="dialog" aria-live="polite" aria-label="Gestion des cookies">
+  <p>Ce site utilise des cookies pour mesurer sa fréquentation et l'efficacité de ses annonces, uniquement avec votre accord. <a href="politique-cookies.html">En savoir plus</a></p>
+  <div class="cookie-btns">
+    <button class="cookie-btn cookie-refuse" id="cookieRefuse" type="button">Refuser</button>
+    <button class="cookie-btn cookie-accept" id="cookieAccept" type="button">Accepter</button>
+  </div>
+</div>
+
+
+<script>
+  const burger = document.getElementById('burger');
+  const navLinks = document.getElementById('navLinks');
+  burger.addEventListener('click', () => navLinks.classList.toggle('open'));
+
+  // ── Dropdown Spécialités (repris de index.html) ──
+  const hasDrop = document.querySelector('.has-drop');
+  const dropToggle = hasDrop.querySelector('.drop-toggle');
+  dropToggle.addEventListener('click', function (e) { e.preventDefault(); hasDrop.classList.toggle('open'); });
+  document.addEventListener('click', function (e) { if (!hasDrop.contains(e.target)) hasDrop.classList.remove('open'); });
+  hasDrop.querySelectorAll('.dropdown a').forEach(a => a.addEventListener('click', () => {
+    hasDrop.classList.remove('open'); navLinks.classList.remove('open');
+  }));
+
+  navLinks.querySelectorAll('a').forEach(a => {
+    if (a.classList.contains('drop-toggle')) return;
+    a.addEventListener('click', () => { navLinks.classList.remove('open'); hasDrop.classList.remove('open'); });
+  });
+
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach((e, i) => {
+      if (e.isIntersecting) { setTimeout(() => e.target.classList.add('on'), i * 80); obs.unobserve(e.target); }
+    });
+  }, { threshold: 0.08 });
+  document.querySelectorAll('.rv').forEach(el => obs.observe(el));
+
+  // ── GOOGLE ADS TAG (chargé uniquement après consentement) ──
+  function loadGoogleAds() {
+    try {
+      if (window._gadsLoaded) return;
+      window._gadsLoaded = true;
+      var s1 = document.createElement('script');
+      s1.async = true;
+      s1.src = 'https://www.googletagmanager.com/gtag/js?id=AW-17093333197';
+      document.head.appendChild(s1);
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      window.gtag = gtag;
+      gtag('js', new Date());
+      // Mode consentement Google (v2) : ce code ne s'execute qu'apres "Accepter"
+      gtag('consent', 'default', { ad_storage: 'granted', analytics_storage: 'granted', ad_user_data: 'granted', ad_personalization: 'granted' });
+      gtag('config', 'AW-17093333197');   // Google Ads
+      gtag('config', 'G-VBXKQSZQS9');     // Google Analytics 4
+    } catch(e) {}
+  }
+
+
+  // ══════════════════════════════════════════════════════════════
+  //  META PIXEL (Facebook / Instagram)
+  //  ⚠️  A REMPLACER : collez ici l'identifiant de votre Pixel Meta
+  //      (Gestionnaire d'evenements Meta > Sources de donnees > Pixel)
+  //      Format : une suite de 15-16 chiffres, ex. '1234567890123456'
+  //      Tant que la valeur reste 'VOTRE_ID_PIXEL', rien ne se charge.
+  // ══════════════════════════════════════════════════════════════
+  var META_PIXEL_ID = 'VOTRE_ID_PIXEL';
+
+  function loadMetaPixel() {
+    try {
+      if (window._metaPixelLoaded) return;
+      if (!META_PIXEL_ID || META_PIXEL_ID === 'VOTRE_ID_PIXEL') return;
+      window._metaPixelLoaded = true;
+      !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];
+      t=b.createElement(e);t.async=!0;t.src=v;
+      s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}
+      (window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', META_PIXEL_ID);
+      fbq('track', 'PageView');
+    } catch(e) {}
+  }
+
+  // ── CONVERSIONS : prise de RDV hors site (Doctolib) ou par telephone ──
+  //    GA4 : clic_doctolib / clic_telephone -> a marquer comme evenements cles,
+  //    puis a importer dans Google Ads comme conversions.
+  (function() {
+    try {
+      document.addEventListener('click', function(ev) {
+        var a = ev.target && ev.target.closest ? ev.target.closest('a[href*="doctolib.fr"], a[href^="tel:"]') : null;
+        if (!a) return;
+        var tel = a.getAttribute('href').indexOf('tel:') === 0;
+        if (window.fbq) { try { fbq('track', tel ? 'Contact' : 'Lead', { content_name: tel ? 'Clic telephone' : 'Clic Doctolib' }); } catch(e) {} }
+        if (window.gtag) { try { gtag('event', tel ? 'clic_telephone' : 'clic_doctolib', { event_category: 'rendez-vous' }); } catch(e) {} }
+      }, true);
+    } catch(e) {}
+  })();
+
+  // ── BANDEAU COOKIES ──
+  (function() {
+    try {
+      var banner = document.getElementById('cookie-banner');
+      if (!banner) return;
+
+      var consent = null;
+      try { consent = localStorage.getItem('cookie-consent'); } catch(e) {}
+
+      if (!consent) {
+        setTimeout(function() { banner.classList.add('visible'); }, 800);
+      } else if (consent === 'accepted') {
+        loadGoogleAds();
+        loadMetaPixel();
+      }
+
+      var btnAccept = document.getElementById('cookieAccept');
+      var btnRefuse = document.getElementById('cookieRefuse');
+
+      if (btnAccept) {
+        btnAccept.addEventListener('click', function() {
+          try { localStorage.setItem('cookie-consent', 'accepted'); } catch(e) {}
+          banner.classList.remove('visible');
+          loadGoogleAds();
+          loadMetaPixel();
+        });
+      }
+
+      if (btnRefuse) {
+        btnRefuse.addEventListener('click', function() {
+          try { localStorage.setItem('cookie-consent', 'refused'); } catch(e) {}
+          banner.classList.remove('visible');
+        });
+      }
+    } catch(e) {}
+  })();
+
+  // Accordéon "Quand consulter" : chaque bloc s'ouvre/se ferme indépendamment
+  (function() {
+    const items = document.querySelectorAll('.quand-item');
+    items.forEach(item => {
+      item.addEventListener('click', function(e) {
+        item.classList.toggle('open');
+      });
+    });
+  })();
+</script>
+</body>
+</html>

@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='16' fill='%238BA185'/><text x='32' y='43' font-family='Georgia,serif' font-size='28' font-weight='600' fill='%23FAF7F2' text-anchor='middle'>AD</text></svg>"/>
+  <title>Endométriose & Ostéopathie Meudon – Aurélie Diméglio</title>
+  <meta name="description" content="Prise en charge de l'endométriose par l'ostéopathie à Meudon. Soulager les douleurs pelviennes, les tensions ligamentaires et améliorer la qualité de vie. Aurélie Diméglio, Ostéopathe D.O., membre du <strong>réseau Endo Île-de-France</strong>."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet"/>
+  <style>
+    /* Securite responsive images */
+    img { max-width: 100%; }
+    img:not([style*="height"]):not([class]) { height: auto; }
+
+    :root {
+      --sage:       #8BA185;
+      --sage-dark:  #3a5c45;
+      --sage-light: #b8ccb3;
+      --sage-pale:  #dce6da;
+      --white:      #faf7f2;
+      --off:        #f1ede6;
+      --off2:       #e6e0d5;
+      --ink:        #1c2a22;
+      --ink2:       #2e4038;
+      --muted:      #637068;
+      --nav-bg:     #768A71;
+      --nav-h:      66px;
+      --r:          14px;
+      --sh:         0 4px 32px rgba(28,42,34,.10);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body { font-family: 'DM Sans', sans-serif; background: var(--white); color: var(--ink); line-height: 1.75; }
+    a { color: inherit; text-decoration: none; }
+    img { display: block; max-width: 100%; }
+    h1,h2,h3,h4 { font-family: 'Cormorant Garamond', serif; font-weight: 500; line-height: 1.18; }
+
+    /* NAVBAR */
+    nav {
+      position: sticky; top: 0; z-index: 999;
+      height: var(--nav-h);
+      background: var(--nav-bg);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 5%;
+      box-shadow: 0 2px 20px rgba(0,0,0,.22);
+    }
+    .nav-brand { color: #fff; font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; letter-spacing: .03em; font-weight: 600; white-space: nowrap; }
+    .nav-links { list-style: none; display: flex; align-items: center; gap: 1.8rem; }
+    .nav-links a { color: rgba(255,255,255,.88); font-size: .82rem; letter-spacing: .07em; text-transform: uppercase; transition: color .2s; }
+    .nav-links a:hover { color: #fff; }
+    .nav-rdv { background: var(--sage); color: #fff !important; padding: .42rem 1.1rem; border-radius: 50px; font-weight: 500; transition: background .2s !important; }
+    .nav-rdv:hover { background: var(--sage-dark) !important; }
+
+    .has-drop { position: relative; }
+    .has-drop > .drop-toggle { cursor: pointer; display: flex; align-items: center; gap: .3rem; }
+    .has-drop > .drop-toggle::after { content: '▾'; font-size: .7rem; opacity: .6; transition: transform .2s; }
+    .has-drop.open > .drop-toggle::after { transform: rotate(180deg); }
+    .dropdown {
+      display: none; position: absolute; top: calc(100% + 8px); left: 0;
+      background: var(--nav-bg); border: 1px solid rgba(122,171,142,.2);
+      border-radius: 10px; min-width: 190px; overflow: hidden;
+      box-shadow: 0 8px 28px rgba(0,0,0,.25); z-index: 1000;
+    }
+    .has-drop.open .dropdown { display: block; }
+    .dropdown a {
+      display: block; padding: .65rem 1.1rem; font-size: .82rem;
+      color: rgba(214,236,224,.8); transition: background .15s, color .15s;
+    }
+    .dropdown a:hover, .dropdown a:active { background: rgba(122,171,142,.15); color: var(--sage); }
+    .burger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; }
+    .burger span { display: block; width: 24px; height: 2px; background: #fff; border-radius: 2px; }
+
+    /* HELPERS */
+    .sec { padding: 5rem 7%; }
+    .sec-white { background: var(--white); }
+    .sec-off { background: var(--off); }
+    .bar { width: 44px; height: 3px; background: linear-gradient(to right, var(--sage-dark), var(--sage)); border-radius: 2px; margin: .9rem 0 1.8rem; }
+
+    /* HERO */
+    .hero-text {
+      background: var(--off);
+      padding: 4rem 7%;
+      min-height: 200px;
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      text-align: center;
+      border-bottom: 1px solid var(--sage-light);
+      border-top: 1px solid var(--sage-light);
+    }
+    .hero-text
+    .hero-text p { color: var(--muted); font-size: 1.05rem; max-width: 720px; margin: 0 auto; }
+
+    /* DEUX COLONNES */
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 3.5rem; align-items: center; max-width: 1140px; margin: 0 auto; }
+    .col-photo { border-radius: var(--r); overflow: hidden; max-height: 480px; }
+    .col-photo img { width: 100%; height: 100%; object-fit: cover; border-radius: var(--r); }
+    .ph {
+      background: linear-gradient(140deg, var(--sage-light), var(--off2));
+      border-radius: var(--r); display: flex; flex-direction: column;
+      align-items: center; justify-content: center; gap: .8rem;
+      color: var(--muted); font-size: .85rem; text-align: center;
+      height: 100%; min-height: 400px; padding: 2rem;
+    }
+    .ph svg { opacity: .3; }
+
+    /* BOUTON */
+    .btn-green {
+      display: inline-flex; align-items: center; gap: .5rem;
+      background: var(--sage); color: #fff;
+      padding: .85rem 1.8rem; border-radius: 50px;
+      font-size: .9rem; font-weight: 500;
+      transition: background .22s, transform .2s;
+      margin-top: 1.5rem;
+    }
+    .btn-green:hover { background: var(--sage-dark); transform: translateY(-2px); }
+
+    /* RESENDO */
+    .resendo {
+      display: inline-flex; align-items: center; gap: .5rem;
+      background: #eaf3f8; border: 1px solid #c5dcea;
+      color: #3a6b80; font-size: .8rem; padding: .4rem 1rem;
+      border-radius: 50px; margin: .6rem 0 1.2rem;
+    }
+
+    /* ITEMS */
+
+.quand-note { font-size: .88rem; color: var(--muted); font-style: italic; text-align: center; margin-top: 1.5rem; }
+
+    /* CONTACT */
+    .contact-row { display: flex; align-items: flex-start; gap: 1rem; margin-bottom: 1.4rem; }
+    .contact-ico { width: 44px; height: 44px; border-radius: 50%; background: rgba(122,171,142,.25); display: flex; align-items: center; justify-content: center; font-size: 1.15rem; flex-shrink: 0; }
+    .contact-row h4 { font-family: 'DM Sans',sans-serif; font-size: .75rem; letter-spacing: .09em; text-transform: uppercase; color: var(--sage-dark); margin-bottom: .25rem; }
+    .contact-row a, .contact-row p { font-size: .9rem; color: var(--muted); }
+    .contact-row a:hover { color: var(--sage-dark); }
+    .map-wrap { border-radius: var(--r); overflow: hidden; aspect-ratio: 4/3; box-shadow: 0 4px 24px rgba(0,0,0,.1); }
+    .map-wrap iframe { width: 100%; height: 100%; border: 0; }
+    .map-link { display: inline-flex; align-items: center; gap: .5rem; margin-top: 1rem; font-size: .85rem; color: var(--sage-dark); }
+    .map-link:hover { opacity: .8; }
+
+    /* CTA BAND */
+    .cta-band {
+      background: linear-gradient(to right, var(--off2) 0%, var(--sage-pale) 50%, var(--sage-light) 100%);
+      text-align: center; padding: 4rem 8%; color: var(--ink2);
+    }
+    .cta-band p { opacity: .85; font-size: 1rem; margin-bottom: 1.5rem; }
+
+    /* FOOTER */
+    footer { background: #141f19; color: rgba(214,236,224,.45); text-align: center; padding: 2rem 8%; font-size: .8rem; }
+    footer a { color: var(--sage); }
+
+    /* REVEAL */
+    .rv { opacity: 0; transform: translateY(24px); transition: opacity .65s ease, transform .65s ease; }
+    .rv.on { opacity: 1; transform: none; }
+
+    /* RESPONSIVE */
+    @media (min-width: 1025px) {
+      .burger { display: none; }
+      .nav-links { display: flex !important; position: static; flex-direction: row; background: transparent; padding: 0; }
+    }
+    @media (max-width: 1024px) {
+      .nav-links { display: none; flex-direction: column; position: absolute; top: var(--nav-h); left: 0; right: 0; background: var(--nav-bg); padding: 1.5rem 6%; gap: .9rem; z-index: 998; }
+      .nav-links.open { display: flex; }
+      .dropdown { position: static; box-shadow: none; border: none; background: transparent; padding-left: 1rem; }
+      .burger { display: flex; }
+      .nav-links a { color: #fff; opacity: .9; }
+    }
+    @media (max-width: 1024px) and (min-width: 561px) {
+      .two-col { grid-template-columns: 1fr 1fr; gap: 2.5rem; }
+      .col-photo { aspect-ratio: 4/5; }
+      .sec { padding: 3.5rem 5%; }
+      .hero-text { padding: 3rem 5%; }
+    }
+    @media (max-width: 560px) {
+      .two-col { grid-template-columns: 1fr !important; gap: 2rem; }
+      .col-photo { aspect-ratio: 4/3; }
+      .sec { padding: 2.5rem 5%; }
+      .hero-text { padding: 2.5rem 5%; }
+      .btn-green { font-size: .85rem; padding: .75rem 1.4rem; }
+      .cta-band { padding: 2.5rem 5%; }
+      #contact .two-col { grid-template-columns: 1fr !important; }
+    }
+
+  /* ── COOKIE BANNER ── */
+  #cookie-banner {
+    position: fixed;
+    bottom: 0; left: 0; right: 0;
+    z-index: 9999;
+    background: #fff;
+    border-top: 2px solid var(--sage-light, #b8ccb3);
+    box-shadow: 0 -4px 24px rgba(28,42,34,.12);
+    padding: 1.2rem 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    font-family: 'DM Sans', sans-serif;
+    font-size: .88rem;
+    color: #2e4038;
+    transform: translateY(100%);
+    transition: transform .4s ease;
+  }
+  #cookie-banner.visible { transform: translateY(0); }
+  #cookie-banner p { flex: 1; min-width: 220px; line-height: 1.6; }
+  #cookie-banner a { color: #3a5c45; text-decoration: underline; }
+  .cookie-btns { display: flex; gap: .75rem; flex-shrink: 0; flex-wrap: wrap; }
+  .cookie-btn {
+    padding: .55rem 1.2rem; border-radius: 50px; font-size: .85rem;
+    font-weight: 500; cursor: pointer; border: none; transition: all .2s;
+    font-family: 'DM Sans', sans-serif;
+  }
+  .cookie-accept { background: #768A71; color: #fff; }
+  .cookie-accept:hover { background: #3a5c45; }
+  .cookie-refuse { background: transparent; color: #637068; border: 1.5px solid #b8ccb3; }
+  .cookie-refuse:hover { background: #f2ede6; }
+  @media (max-width: 560px) {
+    #cookie-banner { flex-direction: column; align-items: flex-start; padding: 1.2rem 5% 1.5rem; }
+    .cookie-btns { width: 100%; }
+    .cookie-btn { flex: 1; text-align: center; }
+  }
+
+    /* ══ TYPOGRAPHIE UNIFIÉE ══ */
+    /* H1 — Grand titre de page */
+    h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.2rem, 4.5vw, 3.2rem);
+      font-weight: 400;
+      line-height: 1.15;
+      letter-spacing: -.01em;
+      color: var(--ink);
+    }
+    /* H2 — Titre de section */
+    h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.7rem, 3vw, 2.3rem);
+      font-weight: 600;
+      line-height: 1.18;
+      color: var(--ink2);
+    }
+    /* H3 — Sous-titre */
+    h3 {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 1.05rem;
+      font-weight: 600;
+      line-height: 1.3;
+      color: var(--ink2);
+      letter-spacing: .01em;
+    }
+    /* Corps de texte */
+    p, li {
+      font-family: 'DM Sans', sans-serif;
+      font-size: .97rem;
+      font-weight: 400;
+      line-height: 1.78;
+    }
+    /* Label (petit texte au-dessus des titres) */
+    .label {
+      font-family: 'DM Sans', sans-serif;
+      font-size: .72rem;
+      font-weight: 500;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--sage);
+    }
+
+    /* ── Vérification responsive unifiée ── */
+    strong { font-weight: 600; }
+    .hero-text p strong, .hero-text p span[style] { font-weight: 400; color: inherit; }
+
+    /* Effet hover/actif pour Quand consulter */
+    .quand-item {
+      transition: padding .25s, background .25s, box-shadow .25s;
+      border-radius: var(--r);
+      cursor: pointer;
+      padding: 1rem 1.2rem;
+      margin-bottom: 1rem;
+      border: 1px solid var(--sage-light);
+      background: rgba(255,255,255,.35);
+    }
+    .quand-item:last-child { margin-bottom: 0; }
+    .quand-item h3 {
+      display: flex;
+      align-items: center;
+      margin: 0;
+    }
+    .quand-item .quand-chevron {
+      margin-left: auto;
+      transition: transform .3s;
+      flex-shrink: 0;
+      color: var(--muted);
+    }
+    .quand-item .quand-body {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height .4s ease, margin-top .4s ease;
+    }
+    .quand-item.open .quand-body {
+      max-height: 400px;
+      margin-top: .9rem;
+    }
+    .quand-item.open .quand-chevron {
+      transform: rotate(180deg);
+    }
+    .quand-item.open {
+      background: rgba(255,255,255,.7);
+      box-shadow: 0 4px 16px rgba(0,0,0,.06);
+    }
+
+    /* Références scientifiques (notes de bas de section) */
+    .refs { max-width:760px; margin:2.2rem auto 0; padding-top:.9rem; border-top:1px solid var(--sage-pale); }
+    .refs .refs-title { font-size:.63rem; letter-spacing:.14em; text-transform:uppercase; color:var(--sage); font-weight:500; margin:0 0 .5rem; }
+    .refs ol { margin:0; padding-left:1.15rem; }
+    .refs li { font-size:.72rem; line-height:1.65; color:var(--muted); margin-bottom:.35rem; }
+    .refs li em { font-style:italic; }
+    .refs a { color:var(--muted); text-decoration:underline; text-underline-offset:2px; }
+    .refs a:hover { color:var(--sage-dark); }
+    sup.ref-mark { font-size:.6em; line-height:0; }
+    sup.ref-mark a { color:var(--sage-dark); text-decoration:none; font-weight:600; }
+    sup.ref-mark a:hover { text-decoration:underline; }
+  </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav>
+  <div class="nav-brand">Ostéopathe à Meudon</div>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Accueil</a></li>
+    <li class="has-drop">
+      <a href="index.html#pourqui" class="drop-toggle" style="color:#fff;font-weight:600;">Spécialités</a>
+      <div class="dropdown">
+        <a href="cycle.html">Règles &amp; cycle</a>
+        <a href="femme-enceinte.html">Femme enceinte</a>
+        <a href="nourrisson.html">Post-partum &amp; nourrisson</a>
+        <a href="endometriose.html" style="color:#fff;font-weight:600;">Endométriose</a>
+        <a href="machoire.html">Mâchoire (ATM)</a>
+      </div>
+    </li>
+    <li><a href="index.html#avis">Avis</a></li>
+    <li><a href="index.html#tarifs">Tarifs</a></li>
+    <li><a href="apropos.html">À propos</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+    <li><a class="nav-rdv" href="https://www.doctolib.fr/osteopathe/paris/aurelie-dimeglio" target="_blank" rel="noopener">Prendre RDV</a></li>
+  </ul>
+  <button class="burger" id="burger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- HERO -->
+<div class="hero-text rv">
+  <h1>Endométriose</h1>
+  <p>L'ostéopathie peut contribuer à soulager les douleurs, améliorer la mobilité tissulaire et vous accompagner dans une meilleure qualité de vie au quotidien.</p>
+</div>
+
+<!-- MON APPROCHE -->
+<section class="sec sec-white" style="border-bottom: 1px solid var(--sage-light);">
+  <h2 class="rv" style="text-align:center;margin-bottom:.5rem;">Mon approche</h2>
+  <div class="bar rv" style="margin-left:auto;margin-right:auto;margin-bottom:2.5rem;"></div>
+  <div class="two-col">
+    <div class="col-photo rv" style="aspect-ratio:3/4;">
+      <img src="images/consultation-endometriose-au-cabinet-de-meudon.webp" alt="Aurélie Diméglio en consultation au cabinet de Meudon" style="width:100%;height:100%;object-fit:cover;object-position:center 45%;" width="846" height="1264" decoding="async" />
+    </div>
+    <div class="rv" style="display:flex;flex-direction:column;justify-content:center;">
+      <span class="resendo"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#8B6F47" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 22c1.25-1.25 2.5-2.5 3.5-4 4.5-7 8-9 13.5-10.5C17.5 13 15 17 10 19c-1.5.5-3 2-5 3H2z"/><path d="M6 18 12 12"/></svg> Membre Endo Île-de-France — réseau ville-hôpital endométriose en Île-de-France</span>
+      <p style="color:var(--muted);font-size:.97rem;margin-bottom:1rem;">Je fais partie du <strong>réseau Endo Île-de-France</strong>, qui permet une prise en charge pluridisciplinaire de l'endométriose en Île-de-France, en lien avec les équipes hospitalières et les autres professionnels de santé.</p>
+      <p style="color:var(--muted);font-size:.97rem;margin-bottom:1rem;">L'endométriose est une maladie chronique complexe qui affecte l'ensemble du corps : adhérences, inflammations, tensions pelviennes, douleurs lombaires ou digestives. L'ostéopathie intervient de manière <span style="color:#3a5c45;font-weight:500"><strong>complémentaire aux traitements médicaux</strong></span>, sans jamais les remplacer.<sup class="ref-mark"><a href="#en-ref1">1</a></sup><sup class="ref-mark"><a href="#en-ref2">2</a></sup></p>
+      <div>
+        <a class="btn-green" href="https://www.doctolib.fr/osteopathe/paris/aurelie-dimeglio" target="_blank" rel="noopener">
+          <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="#ffffff" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+          Prendre RDV en ligne
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMMENT L'OSTÉOPATHIE PEUT AIDER -->
+<section class="sec sec-off quand-section" style="border-bottom: 1px solid var(--sage-light);">
+  <h2 class="rv" style="text-align:center;margin-bottom:.5rem;">Comment l'ostéopathie peut-elle aider ?</h2>
+  <div class="bar rv" style="margin-left:auto;margin-right:auto;margin-bottom:2rem;"></div>
+
+  <div class="quand-item rv">
+    <h3><img src="images/endometriose.webp" alt="Douleurs pelviennes" style="width:26px;height:auto;display:inline-block;vertical-align:middle;margin-right:.4rem;" width="96" height="70" decoding="async" /> Douleurs pelviennes et dysménorrhées<svg class="quand-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></h3>
+    <div class="quand-body">
+      <p>Les <strong>douleurs menstruelles intenses</strong> et les douleurs pelviennes chroniques peuvent être liées à des tensions des tissus environnants : ligaments utérosacraux, fascias pelviens, muscles du plancher pelvien.</p>
+    <p style="color:var(--sage-dark);font-style:italic;">L'ostéopathie travaille sur la mobilité des structures pelviennes pour aider à réduire les tensions et améliorer le confort au quotidien.</p>
+    </div>
+  </div>
+
+  <div class="quand-item rv">
+    <h3><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#8B6F47" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;margin-right:.4rem;"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg> Adhérences et restrictions de mobilité<svg class="quand-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></h3>
+    <div class="quand-body">
+      <p>L'endométriose peut créer des <strong>adhérences entre les organes</strong> — utérus, ovaires, intestins, vessie — limitant leur mobilité et générant des douleurs diffuses.</p>
+    <p style="color:var(--sage-dark);font-style:italic;">Les techniques douces de mobilisation viscérale visent à libérer ces restrictions et à favoriser une meilleure mobilité tissulaire.</p>
+    </div>
+  </div>
+
+  <div class="quand-item rv">
+    <h3><img src="images/craquer.webp" alt="Douleurs lombaires, sciatiques et du coccyx" style="width:26px;height:auto;display:inline-block;vertical-align:middle;margin-right:.4rem;" width="96" height="84" loading="lazy" decoding="async" /> Douleurs lombaires, sciatiques et du coccyx<svg class="quand-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></h3>
+    <div class="quand-body">
+      <p>L'inflammation et les adhérences liées à l'endométriose peuvent irradier vers le dos, les lombaires, le sacrum ou le coccyx, créant des <strong>douleurs chroniques</strong> qui s'étendent au-delà de la sphère pelvienne.</p>
+    <p style="color:var(--sage-dark);font-style:italic;">Une approche globale du rachis et du bassin permet de soulager ces tensions.</p>
+    </div>
+  </div>
+
+  <div class="quand-item rv">
+    <h3><svg width="22" height="22" viewBox="0 0 100 100" fill="none" stroke="#8B6F47" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;margin-right:.4rem;"><path d="M20 15 C20 15 40 15 40 30 C40 45 20 45 20 60 C20 75 40 75 40 85"/><path d="M40 15 C60 15 60 30 60 30 C60 45 40 45 40 60 C40 75 60 75 60 85"/><path d="M60 15 C80 15 80 30 80 30 C80 45 60 45 60 60 C60 75 80 75 80 85"/></svg> Troubles digestifs et inconfort intestinal<svg class="quand-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></h3>
+    <div class="quand-body">
+      <p>Les localisations digestives de l'endométriose (côlon, intestin grêle, rectum…) peuvent provoquer des <strong>ballonnements</strong>, des douleurs à la défécation ou des troubles du transit.</p>
+    <p style="color:var(--sage-dark);font-style:italic;">L'ostéopathie viscérale peut contribuer à améliorer le confort digestif en travaillant sur la mobilité des organes et des fascias abdominaux.</p>
+    </div>
+  </div>
+
+  <div class="quand-item rv">
+    <h3><svg width="22" height="22" viewBox="0 0 100 100" fill="none" stroke="#8B6F47" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;margin-right:.4rem;"><circle cx="50" cy="20" r="10"/><path d="M50 30 L50 55"/><path d="M30 45 L50 55 L70 45"/><path d="M50 55 L35 80"/><path d="M50 55 L65 80"/><path d="M10 65 Q30 55 50 65 Q70 55 90 65"/></svg> Stress, fatigue chronique et tension globale<svg class="quand-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></h3>
+    <div class="quand-body">
+      <p>Vivre avec l'endométriose entraîne souvent un <strong>état de tension, une fatigue</strong> et un impact émotionnel fort. Le corps compense, se contracte, s'adapte.</p>
+    <p style="color:var(--sage-dark);font-style:italic;">L'ostéopathie peut <span style='color:#3a5c45;font-weight:500'>favoriser la détente, la récupération</span> et le retour à un <strong>meilleur équilibre global</strong>.</p>
+    </div>
+  </div>
+
+  <div class="quand-item rv">
+    <h3><img src="images/femme-enceinte.webp" alt="Projet de grossesse" style="width:24px;height:auto;display:inline-block;vertical-align:middle;margin-right:.4rem;" width="96" height="153" loading="lazy" decoding="async" /> Endométriose et projet de grossesse<svg class="quand-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></h3>
+    <div class="quand-body">
+      <p>Dans le cadre d'un <strong>projet de grossesse</strong> ou d'une assistance médicale à la procréation (AMP/FIV), l'ostéopathie peut accompagner la préparation du corps en optimisant la mobilité pelvienne et en réduisant les tensions.</p>
+    <p style="color:var(--sage-dark);font-style:italic;">Je travaille en lien avec votre équipe médicale pour un accompagnement complémentaire et adapté à votre parcours.</p>
+    </div>
+  </div>
+
+  <p class="quand-note rv">Liste non exhaustive — n'hésitez pas à me contacter pour toute question sur votre situation.</p>
+  <p class="quand-note rv">L'ostéopathie est une approche complémentaire qui ne remplace pas le suivi gynécologique ou le traitement médical de l'endométriose. En cas de doute, consultez votre médecin ou spécialiste.</p>
+  <div class="refs rv">
+    <p class="refs-title">Références</p>
+    <ol>
+      <li id="en-ref1"><em>ESHRE guideline: endometriosis</em> — Becker et al., 2022. <a href="https://doi.org/10.1093/hropen/hoac009" target="_blank" rel="noopener">doi</a></li>
+      <li id="en-ref2"><em>Prise en charge de l'endométriose</em> — HAS/CNGOF, 2018. <a href="https://www.has-sante.fr/jcms/c_2819733/fr/prise-en-charge-de-l-endometriose" target="_blank" rel="noopener">has-sante.fr</a></li>
+    </ol>
+  </div>
+</section>
+
+<!-- CTA -->
+<div class="cta-band rv">
+  <p>Prenez rendez-vous en quelques secondes sur Doctolib.</p>
+  <a class="btn-green" href="https://www.doctolib.fr/osteopathe/paris/aurelie-dimeglio" target="_blank" rel="noopener">
+    <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="#ffffff" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+    Prendre RDV en ligne
+  </a>
+</div>
+
+<!-- RESTONS EN CONTACT -->
+<section id="contact" class="sec sec-white">
+  <div class="two-col">
+    <div class="rv">
+      <h2>Restons en contact</h2>
+      <div class="bar"></div>
+      <div class="contact-row">
+        <div class="contact-ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#637068" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/><circle cx="8" cy="16" r="1.2" fill="currentColor"/><circle cx="12" cy="16" r="1.2" fill="currentColor"/><circle cx="16" cy="16" r="1.2" fill="currentColor"/></svg></div>
+        <div><h4>Doctolib</h4><a href="https://www.doctolib.fr/osteopathe/paris/aurelie-dimeglio" target="_blank" rel="noopener">Prendre RDV en ligne →</a></div>
+      </div>
+      <div class="contact-row">
+        <div class="contact-ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#637068" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07A19.5 19.5 0 0 1 5.62 13a19.8 19.8 0 0 1-3.07-8.67A2 2 0 0 1 4.53 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.9z"/></svg></div>
+        <div><h4>Téléphone</h4><a href="tel:0745169868">07.45.16.98.68</a></div>
+      </div>
+      <div class="contact-row">
+        <div class="contact-ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#637068" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg></div>
+        <div><h4>E-mail</h4><a href="mailto:dimeglio.osteo@gmail.com">dimeglio.osteo@gmail.com</a></div>
+      </div>
+      <div class="contact-row">
+        <div class="contact-ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#637068" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg></div>
+        <div><h4>Adresse</h4><p>56–60 Rue Henri Barbusse, 92190 Meudon</p></div>
+      </div>
+    </div>
+    <div class="rv">
+      <div class="map-wrap">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2630.5!2d2.2283!3d48.8128!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e67b4f0c3c4a7b%3A0x1!2s56+Rue+Henri+Barbusse%2C+92190+Meudon!5e0!3m2!1sfr!2sfr!4v1" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Cabinet Meudon"></iframe>
+      </div>
+      <a class="map-link" href="https://maps.google.com/?q=56+Rue+Henri+Barbusse+92190+Meudon" target="_blank" rel="noopener">
+        <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="#637068" stroke-width="2"><path d="M12 2C8 2 5 5 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-4-3-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+        Ouvrir dans Google Maps
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2025 Aurélie Diméglio – Ostéopathe D.O. · 56–60 Rue Henri Barbusse, 92190 Meudon</p>
+  <p style="margin-top:.4rem">
+    <a href="https://www.doctolib.fr/osteopathe/paris/aurelie-dimeglio" target="_blank" rel="noopener">Doctolib</a>
+    &nbsp;·&nbsp;
+    <a href="mailto:dimeglio.osteo@gmail.com">dimeglio.osteo@gmail.com</a>
+    &nbsp;·&nbsp;
+    <a href="index.html">Retour à l'accueil</a>
+  </p>
+</footer>
+
+<!-- BANDEAU COOKIES (le script de consentement en bas de page s'appuie sur ces id) -->
+<div id="cookie-banner" role="dialog" aria-live="polite" aria-label="Gestion des cookies">
+  <p>Ce site utilise des cookies pour mesurer sa fréquentation et l'efficacité de ses annonces, uniquement avec votre accord. <a href="politique-cookies.html">En savoir plus</a></p>
+  <div class="cookie-btns">
+    <button class="cookie-btn cookie-refuse" id="cookieRefuse" type="button">Refuser</button>
+    <button class="cookie-btn cookie-accept" id="cookieAccept" type="button">Accepter</button>
+  </div>
+</div>
+
+
+<script>
+  const burger = document.getElementById('burger');
+  const navLinks = document.getElementById('navLinks');
+  burger.addEventListener('click', () => navLinks.classList.toggle('open'));
+
+  // ── Dropdown Spécialités (repris de index.html) ──
+  const hasDrop = document.querySelector('.has-drop');
+  const dropToggle = hasDrop.querySelector('.drop-toggle');
+  dropToggle.addEventListener('click', function (e) { e.preventDefault(); hasDrop.classList.toggle('open'); });
+  document.addEventListener('click', function (e) { if (!hasDrop.contains(e.target)) hasDrop.classList.remove('open'); });
+  hasDrop.querySelectorAll('.dropdown a').forEach(a => a.addEventListener('click', () => {
+    hasDrop.classList.remove('open'); navLinks.classList.remove('open');
+  }));
+
+  navLinks.querySelectorAll('a').forEach(a => {
+    if (a.classList.contains('drop-toggle')) return;
+    a.addEventListener('click', () => { navLinks.classList.remove('open'); hasDrop.classList.remove('open'); });
+  });
+
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach((e, i) => {
+      if (e.isIntersecting) { setTimeout(() => e.target.classList.add('on'), i * 80); obs.unobserve(e.target); }
+    });
+  }, { threshold: 0.08 });
+  document.querySelectorAll('.rv').forEach(el => obs.observe(el));
+
+  // ── GOOGLE ADS TAG (chargé uniquement après consentement) ──
+  function loadGoogleAds() {
+    try {
+      if (window._gadsLoaded) return;
+      window._gadsLoaded = true;
+      var s1 = document.createElement('script');
+      s1.async = true;
+      s1.src = 'https://www.googletagmanager.com/gtag/js?id=AW-17093333197';
+      document.head.appendChild(s1);
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      window.gtag = gtag;
+      gtag('js', new Date());
+      // Mode consentement Google (v2) : ce code ne s'execute qu'apres "Accepter"
+      gtag('consent', 'default', { ad_storage: 'granted', analytics_storage: 'granted', ad_user_data: 'granted', ad_personalization: 'granted' });
+      gtag('config', 'AW-17093333197');   // Google Ads
+      gtag('config', 'G-VBXKQSZQS9');     // Google Analytics 4
+    } catch(e) {}
+  }
+
+
+  // ══════════════════════════════════════════════════════════════
+  //  META PIXEL (Facebook / Instagram)
+  //  ⚠️  A REMPLACER : collez ici l'identifiant de votre Pixel Meta
+  //      (Gestionnaire d'evenements Meta > Sources de donnees > Pixel)
+  //      Format : une suite de 15-16 chiffres, ex. '1234567890123456'
+  //      Tant que la valeur reste 'VOTRE_ID_PIXEL', rien ne se charge.
+  // ══════════════════════════════════════════════════════════════
+  var META_PIXEL_ID = 'VOTRE_ID_PIXEL';
+
+  function loadMetaPixel() {
+    try {
+      if (window._metaPixelLoaded) return;
+      if (!META_PIXEL_ID || META_PIXEL_ID === 'VOTRE_ID_PIXEL') return;
+      window._metaPixelLoaded = true;
+      !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];
+      t=b.createElement(e);t.async=!0;t.src=v;
+      s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}
+      (window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', META_PIXEL_ID);
+      fbq('track', 'PageView');
+    } catch(e) {}
+  }
+
+  // ── CONVERSIONS : prise de RDV hors site (Doctolib) ou par telephone ──
+  //    GA4 : clic_doctolib / clic_telephone -> a marquer comme evenements cles,
+  //    puis a importer dans Google Ads comme conversions.
+  (function() {
+    try {
+      document.addEventListener('click', function(ev) {
+        var a = ev.target && ev.target.closest ? ev.target.closest('a[href*="doctolib.fr"], a[href^="tel:"]') : null;
+        if (!a) return;
+        var tel = a.getAttribute('href').indexOf('tel:') === 0;
+        if (window.fbq) { try { fbq('track', tel ? 'Contact' : 'Lead', { content_name: tel ? 'Clic telephone' : 'Clic Doctolib' }); } catch(e) {} }
+        if (window.gtag) { try { gtag('event', tel ? 'clic_telephone' : 'clic_doctolib', { event_category: 'rendez-vous' }); } catch(e) {} }
+      }, true);
+    } catch(e) {}
+  })();
+
+  // ── BANDEAU COOKIES ──
+  (function() {
+    try {
+      var banner = document.getElementById('cookie-banner');
+      if (!banner) return;
+
+      var consent = null;
+      try { consent = localStorage.getItem('cookie-consent'); } catch(e) {}
+
+      if (!consent) {
+        setTimeout(function() { banner.classList.add('visible'); }, 800);
+      } else if (consent === 'accepted') {
+        loadGoogleAds();
+        loadMetaPixel();
+      }
+
+      var btnAccept = document.getElementById('cookieAccept');
+      var btnRefuse = document.getElementById('cookieRefuse');
+
+      if (btnAccept) {
+        btnAccept.addEventListener('click', function() {
+          try { localStorage.setItem('cookie-consent', 'accepted'); } catch(e) {}
+          banner.classList.remove('visible');
+          loadGoogleAds();
+          loadMetaPixel();
+        });
+      }
+
+      if (btnRefuse) {
+        btnRefuse.addEventListener('click', function() {
+          try { localStorage.setItem('cookie-consent', 'refused'); } catch(e) {}
+          banner.classList.remove('visible');
+        });
+      }
+    } catch(e) {}
+  })();
+
+  // Accordéon "Quand consulter" : chaque bloc s'ouvre/se ferme indépendamment
+  (function() {
+    const items = document.querySelectorAll('.quand-item');
+    items.forEach(item => {
+      item.addEventListener('click', function(e) {
+        item.classList.toggle('open');
+      });
+    });
+  })();
+</script>
+</body>
+</html>
