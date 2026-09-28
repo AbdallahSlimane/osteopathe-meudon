@@ -31,6 +31,16 @@ Each page is a **fully self-contained HTML document** — there are no shared CS
 
 When creating a new specialty page, copy an existing specialty page (e.g. `machoire.html` or `cycle.html`) as the template so the nav, footer, fonts, and JS stay consistent, then add a link to it in the "Spécialités" dropdown on every page.
 
+## Tracking & consent
+
+All tracking is **gated behind the cookie banner**. Each of the 7 content pages carries, in its own `<script>` block, `loadGoogleAds()` (which configures both Google Ads `AW-17093333197` and Google Analytics 4 `G-VBXKQSZQS9` on one gtag.js, after a Consent Mode v2 `consent default granted` call) and `loadMetaPixel()`, called from exactly two places: on load when consent is already `accepted`, and in the "Accepter" click handler. Adding a new tag means adding a `loadXxx()` function and both call sites, on every page.
+
+The **Meta Pixel ID is a placeholder** (`var META_PIXEL_ID = 'VOTRE_ID_PIXEL';`). The loader returns early while it holds that value, so nothing is sent until a real ID is pasted in — on all 7 pages.
+
+The **conversion event is the Doctolib click**, since appointments are booked off-site where no pixel can be placed. A delegated listener on `a[href*="doctolib.fr"]` fires `fbq('track','Lead')` and `gtag('event','clic_doctolib')`.
+
+`politique-cookies.html` must list every cookie actually deposited (Google *and* Meta) plus the out-of-EU transfer notice — update it whenever a tag is added or removed.
+
 ## Positioning (since September 2026)
 
 The practice is positioned as **santé de la femme & périnatalité**. The homepage splits "Pour qui ?" into a primary grid (Règles & cycle, Femmes enceintes, Post-partum & nourrisson, Endométriose, Drainage lymphatique) and a visually de-emphasised `.profiles-grid.secondary` block (Douleurs nerveuses, Mâchoire, Vie de bureau, TMS). Keep that hierarchy when adding cards — new women's-health motifs go in the primary grid, everything else in the secondary one.

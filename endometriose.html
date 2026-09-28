@@ -535,9 +535,50 @@
       function gtag(){dataLayer.push(arguments);}
       window.gtag = gtag;
       gtag('js', new Date());
-      gtag('config', 'AW-17093333197');
+      // Mode consentement Google (v2) : ce code ne s'execute qu'apres "Accepter"
+      gtag('consent', 'default', { ad_storage: 'granted', analytics_storage: 'granted', ad_user_data: 'granted', ad_personalization: 'granted' });
+      gtag('config', 'AW-17093333197');   // Google Ads
+      gtag('config', 'G-VBXKQSZQS9');     // Google Analytics 4
     } catch(e) {}
   }
+
+
+  // ══════════════════════════════════════════════════════════════
+  //  META PIXEL (Facebook / Instagram)
+  //  ⚠️  A REMPLACER : collez ici l'identifiant de votre Pixel Meta
+  //      (Gestionnaire d'evenements Meta > Sources de donnees > Pixel)
+  //      Format : une suite de 15-16 chiffres, ex. '1234567890123456'
+  //      Tant que la valeur reste 'VOTRE_ID_PIXEL', rien ne se charge.
+  // ══════════════════════════════════════════════════════════════
+  var META_PIXEL_ID = 'VOTRE_ID_PIXEL';
+
+  function loadMetaPixel() {
+    try {
+      if (window._metaPixelLoaded) return;
+      if (!META_PIXEL_ID || META_PIXEL_ID === 'VOTRE_ID_PIXEL') return;
+      window._metaPixelLoaded = true;
+      !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];
+      t=b.createElement(e);t.async=!0;t.src=v;
+      s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}
+      (window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', META_PIXEL_ID);
+      fbq('track', 'PageView');
+    } catch(e) {}
+  }
+
+  // ── CONVERSION : clic vers Doctolib (la prise de RDV se fait hors site) ──
+  (function() {
+    try {
+      document.addEventListener('click', function(ev) {
+        var a = ev.target && ev.target.closest ? ev.target.closest('a[href*="doctolib.fr"]') : null;
+        if (!a) return;
+        if (window.fbq) { try { fbq('track', 'Lead', { content_name: 'Clic Doctolib' }); } catch(e) {} }
+        if (window.gtag) { try { gtag('event', 'clic_doctolib', { event_category: 'rendez-vous' }); } catch(e) {} }
+      }, true);
+    } catch(e) {}
+  })();
 
   // ── BANDEAU COOKIES ──
   (function() {
@@ -552,6 +593,7 @@
         setTimeout(function() { banner.classList.add('visible'); }, 800);
       } else if (consent === 'accepted') {
         loadGoogleAds();
+        loadMetaPixel();
       }
 
       var btnAccept = document.getElementById('cookieAccept');
@@ -562,6 +604,7 @@
           try { localStorage.setItem('cookie-consent', 'accepted'); } catch(e) {}
           banner.classList.remove('visible');
           loadGoogleAds();
+          loadMetaPixel();
         });
       }
 
